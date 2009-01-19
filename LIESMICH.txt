@@ -1,0 +1,39 @@
+LIESMICH - MetalChaser 1.1
+Version: 1.0 
+Datum: 29.10.2008
+
+= INHALT =
+
+0) HARDWARE VORRAUSSETZTUNGEN
+1) BENOETIGTE PROGRAMME
+2) INSTALLATION
+3) BEKANNTE PROBLEME
+
+
+0) HARDWARE VORRAUSSETZTUNGEN
+
+Um MetalChaser flüssig zu spielen werden mindestens folgende Hardwarespezifikationen benoetigt:
+		-Mindestens ca. 1 GB RAM
+		-Grafikkarte mit ca. 265 MB Speicher
+		-ca. 40 MB Festplattenspeicher
+
+Es kann sein, dass das Spiel auch auf schlechterer Hardware laeuft, aber das wird lange Ladezeiten und Ruckler beinhalten.		
+
+1) BENOETIGTE PROGRAMME
+
+Um MetalChaser erfolgreich spielen zu koennen wird Java benötigt, mindestens in der Version 1.6 (bzw. JRE 6).
+Dies kann unter http://java.com/download heruntergeladen werden.
+Zu Hardware Anforderungen siehe Punkt 0).
+
+
+2) INSTALLATION
+
+Es ist keine Installation erforderlich. Es genügt, das Spiel in ein Verzeichnis auf der Festplatte zu entpacken, wo genügend Speicherplatz ist.
+Anschließend kann das Spiel unter Windows über "win32starter.bat" und unter Linux über das "linux starter"-Script gestartet werden.
+
+3) BEKANNTE PROBLEME
+
+Problem: Probleme mit dem Ändern der Auflösung unter Linux: Der Bildschirmausschnitt lässt sich mit der Maus verschieben und das Programm nimmt keine Tastenanschlaege entgegen.
+Loesung: Das Spiel mit dem Parameter w starten.
+
+

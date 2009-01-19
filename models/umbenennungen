@@ -1,0 +1,57 @@
+Ordner
+---------------------
+env ---> data0
+loot---> data1
+mecha--- gelöscht
+rakete-> data2
+sentry-> data3
+smile--> data4
+z300---> data5
+---------------------
+
+-->env<--
+ruin -> 000
+tree1-> 001
+tree2-> 002
+
+-->loot<--
+batterie    --> 000
+metaltrash  --> 001
+munition    --> 002
+schlauch    --> 003
+
+-->rakete<--
+rakete      --> 000
+
+-->sentry<--
+drehgestell	000
+gettling	001
+nieten		002
+standfuss	003
+stuetze		004
+
+-->smile<--
+pusher		pub0
+shocker		sub0
+	
+-->Xub0<--
+lufter		000
+nieten 		001
+propeller	002
+Xsmile		003
+
+-->z300<--
+hufte		000
+lfoot		001
+lober		002
+lunter		003
+rfoot		004
+rober		005
+runter		006
+torso		007
+weapon1		008
+weapon2		009
+
+
+
+
