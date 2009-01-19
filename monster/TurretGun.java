@@ -248,7 +248,7 @@ public class TurretGun extends master implements RotateAble, RadarAble {
 					LevelPlay.bullets.add(g);
 					
 					//abklingzeit = (long) (System.currentTimeMillis() + (1 / RateOfFire) * 1000);
-					abklingzeit = (long) (System.currentTimeMillis() + 300);
+					abklingzeit = (long) (System.currentTimeMillis() + 300 - RateOfFire*20);
 					
 					if( salve < 200)
 						salve++;

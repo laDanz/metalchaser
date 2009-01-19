@@ -45022,7 +45022,8 @@
 <Objekt>
 <Klasse>class other.LevelInfo</Klasse>
 <Position>(10.0, 0.0, -2.0)</Position>
-<option>This is Level 2</option>
+<option>The enemies get tougher the/nfarther I get. Guess I have/nto get tougher as well...
+</option>
 </Objekt>
 <Objekt>
 <Klasse>class other.StartPkt</Klasse>

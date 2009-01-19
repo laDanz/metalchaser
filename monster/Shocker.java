@@ -67,7 +67,7 @@ public class Shocker extends Blocker {
 			last_shock = System.currentTimeMillis();
 			// zusaetzlich noch schocken
 			int r = (int) (getPosition().add(LevelPlay.p.getPosition().mal(-1)).length());
-			int schaden = (getElectronics() * 5 - (2 * r));
+			int schaden = (5 + getElectronics() * 3 - (2 * r));
 			schaden = Math.max(0, schaden);
 			if (schaden == 0)
 				return;

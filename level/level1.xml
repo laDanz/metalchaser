@@ -45016,7 +45016,9 @@
 <Objekt>
 <Klasse>class other.LevelInfo</Klasse>
 <Position>(10.0, 0.0, -2.0)</Position>
-<option>This is Level 1</option>
+<option>
+Ok, this was foreplay./nNow it's time to seriously/nkick some metal asses!
+</option>
 </Objekt>
 <Objekt>
 <Klasse>class other.StartPkt</Klasse>

@@ -39,8 +39,8 @@ public class MachineGun extends WaffenMaster {
 
 		sound.play();		
 
-		double dx = salve/20 + random.nextGaussian() / (1 + SuperMain.profil.mecha.getGatlingAccuracy()/30 );
-		double dy = salve/20 + random.nextGaussian() / (1 + SuperMain.profil.mecha.getGatlingAccuracy()/30 );
+		double dx = salve/20 + random.nextGaussian()*2 / (1 + SuperMain.profil.mecha.getGatlingAccuracy()/20 );
+		double dy = salve/20 + random.nextGaussian()*2 / (1 + SuperMain.profil.mecha.getGatlingAccuracy()/20 );
 			
 		
 		//System.out.print("\t offset: "+salve/100+"\t dx= "+dx+"\t dy= "+dy+"\n");
