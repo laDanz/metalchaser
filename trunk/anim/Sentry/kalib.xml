@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Animation>
+<VerschiebWS>
+<Torso>
+(0.0, -2.1000000000000005, 0.0)
+</Torso>
+<Weapon1>
+(0.0, -2.000000000000001, 0.0)
+</Weapon1>
+<Weapon2>
+(0.0, 0.0, 0.0)
+</Weapon2>
+<lOber>
+(0.0, 0.0, 0.0)
+</lOber>
+<lUnter>
+(0.0, 0.0, 0.0)
+</lUnter>
+<lFoot>
+(0.0, 0.0, 0.0)
+</lFoot>
+<rOber>
+(0.0, 0.35, 0.0)
+</rOber>
+<rUnter>
+(-0.25, 0.65, 0.0)
+</rUnter>
+<rFoot>
+(0.9500000000000003, 2.549999999999999, 0.0)
+</rFoot>
+<rHydra>
+0.0
+</rHydra>
+<lHydra>
+0.0
+</lHydra>
+</VerschiebWS>
+<RotWS>
+<Torso>
+(0.0, 0.0, 0.0)
+</Torso>
+<Weapon1>
+(0.0, 0.0, 0.0)
+</Weapon1>
+<Weapon2>
+(0.0, 0.0, 0.0)
+</Weapon2>
+<lOber>
+(0.0, 0.0, 0.0)
+</lOber>
+<lUnter>
+(0.0, 0.0, 0.0)
+</lUnter>
+<lFoot>
+(0.0, 0.0, 0.0)
+</lFoot>
+<rOber>
+(-0.10000000000000002, -0.9500000000000002, 0.0)
+</rOber>
+<rUnter>
+(0.44999999999999996, -1.4500000000000006, 0.49999999999999994)
+</rUnter>
+<rFoot>
+(-1.2000000000000004, -2.2, 0.0)
+</rFoot>
+<rHydra>
+0.0
+</rHydra>
+<lHydra>
+0.0
+</lHydra>
+</RotWS>
+<WinkelSet>
+<Torso>
+(0.0, 0.0, 0.0)
+</Torso>
+<Weapon1>
+(0.0, 0.0, 0.0)
+</Weapon1>
+<Weapon2>
+(0.0, 0.0, 0.0)
+</Weapon2>
+<lOber>
+(0.0, 0.0, 0.0)
+</lOber>
+<lUnter>
+(0.0, 0.0, 0.0)
+</lUnter>
+<lFoot>
+(0.0, 0.0, 0.0)
+</lFoot>
+<rOber>
+(0.0, 0.0, 0.0)
+</rOber>
+<rUnter>
+(0.0, 0.0, 0.0)
+</rUnter>
+<rFoot>
+(0.0, 0.0, 0.0)
+</rFoot>
+<rHydra>
+0.0
+</rHydra>
+<lHydra>
+0.0
+</lHydra>
+</WinkelSet>
+<WinkelSet>
+<Torso>
+(0.0, 0.0, 0.0)
+</Torso>
+<Weapon1>
+(0.0, 0.0, 0.0)
+</Weapon1>
+<Weapon2>
+(0.0, 0.0, 0.0)
+</Weapon2>
+<lOber>
+(0.0, 0.0, 0.0)
+</lOber>
+<lUnter>
+(0.0, 0.0, 0.0)
+</lUnter>
+<lFoot>
+(0.0, 0.0, 0.0)
+</lFoot>
+<rOber>
+(0.0, 0.0, 0.0)
+</rOber>
+<rUnter>
+(0.0, 0.0, 0.0)
+</rUnter>
+<rFoot>
+(0.0, 0.0, 0.0)
+</rFoot>
+<rHydra>
+0.0
+</rHydra>
+<lHydra>
+0.0
+</lHydra>
+</WinkelSet>
+<WinkelSet>
+<Torso>
+(0.0, 0.0, 0.0)
+</Torso>
+<Weapon1>
+(0.0, 0.0, 0.0)
+</Weapon1>
+<Weapon2>
+(0.0, 0.0, 0.0)
+</Weapon2>
+<lOber>
+(0.0, 0.0, 0.0)
+</lOber>
+<lUnter>
+(0.0, 0.0, 0.0)
+</lUnter>
+<lFoot>
+(0.0, 0.0, 0.0)
+</lFoot>
+<rOber>
+(0.0, 0.0, 0.0)
+</rOber>
+<rUnter>
+(0.0, 0.0, 0.0)
+</rUnter>
+<rFoot>
+(0.0, 0.0, 0.0)
+</rFoot>
+<rHydra>
+0.0
+</rHydra>
+<lHydra>
+0.0
+</lHydra>
+</WinkelSet>
+<WinkelSet>
+<Torso>
+(0.0, 0.0, 0.0)
+</Torso>
+<Weapon1>
+(0.0, 0.0, 0.0)
+</Weapon1>
+<Weapon2>
+(0.0, 0.0, 0.0)
+</Weapon2>
+<lOber>
+(0.0, 0.0, 0.0)
+</lOber>
+<lUnter>
+(0.0, 0.0, 0.0)
+</lUnter>
+<lFoot>
+(0.0, 0.0, 0.0)
+</lFoot>
+<rOber>
+(0.0, 0.0, 0.0)
+</rOber>
+<rUnter>
+(0.0, 0.0, 0.0)
+</rUnter>
+<rFoot>
+(0.0, 0.0, 0.0)
+</rFoot>
+<rHydra>
+0.0
+</rHydra>
+<lHydra>
+0.0
+</lHydra>
+</WinkelSet>
+<WinkelSet>
+<Torso>
+(0.0, 0.0, 0.0)
+</Torso>
+<Weapon1>
+(0.0, 0.0, 0.0)
+</Weapon1>
+<Weapon2>
+(0.0, 0.0, 0.0)
+</Weapon2>
+<lOber>
+(0.0, 0.0, 0.0)
+</lOber>
+<lUnter>
+(0.0, 0.0, 0.0)
+</lUnter>
+<lFoot>
+(0.0, 0.0, 0.0)
+</lFoot>
+<rOber>
+(0.0, 0.0, 0.0)
+</rOber>
+<rUnter>
+(0.0, 0.0, 0.0)
+</rUnter>
+<rFoot>
+(0.0, 0.0, 0.0)
+</rFoot>
+<rHydra>
+0.0
+</rHydra>
+<lHydra>
+0.0
+</lHydra>
+</WinkelSet>
+<WinkelSet>
+<Torso>
+(0.0, 0.0, 0.0)
+</Torso>
+<Weapon1>
+(0.0, 0.0, 0.0)
+</Weapon1>
+<Weapon2>
+(0.0, 0.0, 0.0)
+</Weapon2>
+<lOber>
+(0.0, 0.0, 0.0)
+</lOber>
+<lUnter>
+(0.0, 0.0, 0.0)
+</lUnter>
+<lFoot>
+(0.0, 0.0, 0.0)
+</lFoot>
+<rOber>
+(0.0, 0.0, 0.0)
+</rOber>
+<rUnter>
+(0.0, 0.0, 0.0)
+</rUnter>
+<rFoot>
+(0.0, 0.0, 0.0)
+</rFoot>
+<rHydra>
+0.0
+</rHydra>
+<lHydra>
+0.0
+</lHydra>
+</WinkelSet>
+<WinkelSet>
+<Torso>
+(0.0, 0.0, 0.0)
+</Torso>
+<Weapon1>
+(0.0, 0.0, 0.0)
+</Weapon1>
+<Weapon2>
+(0.0, 0.0, 0.0)
+</Weapon2>
+<lOber>
+(0.0, 0.0, 0.0)
+</lOber>
+<lUnter>
+(0.0, 0.0, 0.0)
+</lUnter>
+<lFoot>
+(0.0, 0.0, 0.0)
+</lFoot>
+<rOber>
+(0.0, 0.0, 0.0)
+</rOber>
+<rUnter>
+(0.0, 0.0, 0.0)
+</rUnter>
+<rFoot>
+(0.0, 0.0, 0.0)
+</rFoot>
+<rHydra>
+0.0
+</rHydra>
+<lHydra>
+0.0
+</lHydra>
+</WinkelSet>
+<WinkelSet>
+<Torso>
+(0.0, 0.0, 0.0)
+</Torso>
+<Weapon1>
+(0.0, 0.0, 0.0)
+</Weapon1>
+<Weapon2>
+(0.0, 0.0, 0.0)
+</Weapon2>
+<lOber>
+(0.0, 0.0, 0.0)
+</lOber>
+<lUnter>
+(0.0, 0.0, 0.0)
+</lUnter>
+<lFoot>
+(0.0, 0.0, 0.0)
+</lFoot>
+<rOber>
+(0.0, 0.0, 0.0)
+</rOber>
+<rUnter>
+(0.0, 0.0, 0.0)
+</rUnter>
+<rFoot>
+(0.0, 0.0, 0.0)
+</rFoot>
+<rHydra>
+0.0
+</rHydra>
+<lHydra>
+0.0
+</lHydra>
+</WinkelSet>
+<WinkelSet>
+<Torso>
+(0.0, 0.0, 0.0)
+</Torso>
+<Weapon1>
+(0.0, 0.0, 0.0)
+</Weapon1>
+<Weapon2>
+(0.0, 0.0, 0.0)
+</Weapon2>
+<lOber>
+(0.0, 0.0, 0.0)
+</lOber>
+<lUnter>
+(0.0, 0.0, 0.0)
+</lUnter>
+<lFoot>
+(0.0, 0.0, 0.0)
+</lFoot>
+<rOber>
+(0.0, 0.0, 0.0)
+</rOber>
+<rUnter>
+(0.0, 0.0, 0.0)
+</rUnter>
+<rFoot>
+(0.0, 0.0, 0.0)
+</rFoot>
+<rHydra>
+0.0
+</rHydra>
+<lHydra>
+0.0
+</lHydra>
+</WinkelSet>
+<WinkelSet>
+<Torso>
+(0.0, 0.0, 0.0)
+</Torso>
+<Weapon1>
+(0.0, 0.0, 0.0)
+</Weapon1>
+<Weapon2>
+(0.0, 0.0, 0.0)
+</Weapon2>
+<lOber>
+(0.0, 0.0, 0.0)
+</lOber>
+<lUnter>
+(0.0, 0.0, 0.0)
+</lUnter>
+<lFoot>
+(0.0, 0.0, 0.0)
+</lFoot>
+<rOber>
+(0.0, 0.0, 0.0)
+</rOber>
+<rUnter>
+(0.0, 0.0, 0.0)
+</rUnter>
+<rFoot>
+(0.0, 0.0, 0.0)
+</rFoot>
+<rHydra>
+0.0
+</rHydra>
+<lHydra>
+0.0
+</lHydra>
+</WinkelSet>
+</Animation>
