@@ -40,17 +40,17 @@ public class EquipmentDrop extends master {
 		putted = false;
 	}
 
-	@Override
+	//@override
 	public String getDescription() {
 		return "Equipment Drop";
 	}
 
-	@Override
+	//@override
 	public int getOptionCount() {
 		return 3;
 	}
 
-	@Override
+	//@override
 	public String getOptionDescription(int i) {
 		switch(i){
 			case 0: return "EquipType";
@@ -62,12 +62,12 @@ public class EquipmentDrop extends master {
 		}
 	}
 
-	@Override
+	//@override
 	public int getOptionType(int i) {
 		return Objekt.INT;
 	}
 
-	@Override
+	//@override
 	public Object getOptionValue(int i) {
 		switch(i){
 			case 0: return type;
@@ -79,7 +79,7 @@ public class EquipmentDrop extends master {
 		}
 	}
 
-	@Override
+	//@override
 	public void logic() {
 		super.logic();
 
@@ -88,13 +88,13 @@ public class EquipmentDrop extends master {
 		}
 	}
 
-	@Override
+	//@override
 	public void render() {
 		super.render();
 
 	}
 
-	@Override
+	//@override
 	public void setOptionValue(int i, Object value) {
 		switch(i){
 			case 0: type = (Integer) value; break;
@@ -106,7 +106,7 @@ public class EquipmentDrop extends master {
 		}
 	}
 
-	@Override
+	//@override
 	public boolean isInWertebereich(int i, Object value) {
 		return ((Integer) value) > -1;
 	}

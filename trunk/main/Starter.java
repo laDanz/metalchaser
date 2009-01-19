@@ -62,7 +62,7 @@ public class Starter implements GameState {
 
 	}
 
-	@Override
+	//@override
 	public void doFinalizeActions() {
 		// TODO Auto-generated method stub
 
@@ -126,7 +126,7 @@ public class Starter implements GameState {
 	private Runnable onNetz() {
 		// TODO Auto-generated method stub
 		return new Runnable() {
-			@Override
+			//@override
 			public void run() {
 				String serv = JOptionPane.showInputDialog("Server");
 				if (serv == null || serv.equals("")) {

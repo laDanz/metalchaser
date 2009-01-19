@@ -45,7 +45,7 @@ public class SimplServer {
 
 	private void startListenForClients() {
 		new Thread() {
-			@Override
+			//@override
 			public void run() {
 				while (!socket.isClosed()) {
 					try {
@@ -140,7 +140,7 @@ public class SimplServer {
 			// broadCast("neuer Client: " + client.getRemoteSocketAddress());
 		}
 
-		@Override
+		//@override
 		public void run() {
 			try {
 				ObjectInputStream is = ois;

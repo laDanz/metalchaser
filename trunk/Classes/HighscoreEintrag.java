@@ -469,7 +469,7 @@ public class HighscoreEintrag implements Serializable {
 	private static Comparator<? super Vector<Object>> getHighscoreComparator() {
 
 		return new Comparator<Vector<Object>>() {
-			@Override
+			//@override
 			public int compare(Vector<Object> o1, Vector<Object> o2) {
 				if (o1.size() != 2 || o2.size() != 2) {
 					throw new RuntimeException("Wrong length!");

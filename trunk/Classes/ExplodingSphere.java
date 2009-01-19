@@ -29,7 +29,7 @@ public class ExplodingSphere implements Objekt {
 		s.setTextureFlag(true);
 		if (tex == null) {
 			SuperMain.toRun.add(new Runnable() {
-				@Override
+				//@override
 				public void run() {
 					try {
 						tex = SuperMain.loadTex(SuperMain.ordner + "img/env/explosion.png");
@@ -43,13 +43,13 @@ public class ExplodingSphere implements Objekt {
 		}
 	}
 
-	@Override
+	//@override
 	public void logic() {
 		time_alive++;
 		dimension = start_dimension.mal(1 + ((time_alive + .0) / duration_fps) * scalar);
 		if (time_alive > duration_fps) {
 			SuperMain.toRun.add(new Runnable() {
-				@Override
+				//@override
 				public void run() {
 					SuperMain.level.removeObj(ExplodingSphere.this);
 
@@ -58,7 +58,7 @@ public class ExplodingSphere implements Objekt {
 		}
 	}
 
-	@Override
+	//@override
 	public void render() {
 		if (tex == null)
 			return;
@@ -82,85 +82,85 @@ public class ExplodingSphere implements Objekt {
 		OGL.verschieb(position.negiere());
 	}
 
-	@Override
+	//@override
 	public void setOptionValue(int i, Object value) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+	//@override
 	public void setPosition(Vektor3D v) {
 		position = v;
 
 	}
 
-	@Override
+	//@override
 	public void setPositionDirectly(Vektor3D v) {
 		position = v;
 
 	}
 
-	@Override
+	//@override
 	public boolean checkCollisionforObjekt(Vektor3D pos) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
+	//@override
 	public String getDescription() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	//@override
 	public Vektor3D getDimension() {
 		// TODO Auto-generated method stub
 		return dimension;
 	}
 
-	@Override
+	//@override
 	public int getID() {
 		// TODO Auto-generated method stub
 		return id;
 	}
 
-	@Override
+	//@override
 	public int getOptionCount() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
+	//@override
 	public String getOptionDescription(int i) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	//@override
 	public int getOptionType(int i) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
+	//@override
 	public Object getOptionValue(int i) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	//@override
 	public Vektor3D getPosition() {
 		// TODO Auto-generated method stub
 		return position;
 	}
 
-	@Override
+	//@override
 	public int hurt(int by) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
+	//@override
 	public boolean isInWertebereich(int i, Object value) {
 		// TODO Auto-generated method stub
 		return false;

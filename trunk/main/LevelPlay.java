@@ -318,7 +318,7 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 
 	private Runnable onStartLevel() {
 		return new Runnable() {
-			@Override
+			//@override
 			public void run() {
 				SuperMain.statistics.setStartTime();
 				// Health nochmal updaten
@@ -439,7 +439,7 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 			if (o.getClass().toString().equals("class other.LevelMusik")) {
 				musik = new OpenAlClip(SuperMain.ordner + ((LevelMusik) o).getMusikFile());
 				musik.addEndAction(new Runnable() {
-					@Override
+					//@override
 					public void run() {
 						musik.play();
 
@@ -462,7 +462,7 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 		musik.play();
 	}
 
-	@Override
+	//@override
 	public void doFinalizeActions() {
 		if (musik != null)
 			musik.stop();
@@ -1920,7 +1920,7 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 			if (SuperMain.statistics.getLevel().endsWith("4.xml")) {
 				// war das letzte level--> Highscore eintrag!
 				new Thread() {
-					@Override
+					//@override
 					public void run() {
 						super.run();
 						laden = new Laden();

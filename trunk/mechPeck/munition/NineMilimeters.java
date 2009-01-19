@@ -26,13 +26,13 @@ public class NineMilimeters implements Munition {
 		return 1;
 	}
 
-	@Override
+	//@override
 	public void setPiercing(int value) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+	//@override
 	public void setSchaden(int value) {
 		// TODO Auto-generated method stub
 
@@ -51,7 +51,7 @@ public class NineMilimeters implements Munition {
 		OGL.skaliere(scale.reziproke());
 	}
 
-	@Override
+	//@override
 	public String toString() {
 		// TODO Auto-generated method stub
 		return "9mm Mun";
@@ -61,7 +61,7 @@ public class NineMilimeters implements Munition {
 	 * Checks for equality.<br>
 	 * Returns true, when Piercing, Damage and Caliber is equal.
 	 */
-	@Override
+	//@override
 	public boolean equals(Object obj) {
 		if (obj instanceof NineMilimeters) {
 			NineMilimeters other = (NineMilimeters) obj;

@@ -270,7 +270,7 @@ public class myAudio {
 		setGain(gain);
 		// Writing starten
 		new Thread() {
-			@Override
+			//@override
 			public void run() {
 
 				super.run();
@@ -295,7 +295,7 @@ public class myAudio {
 		line.close();
 	}
 
-	@Override
+	//@override
 	protected void finalize() throws Throwable {
 		// TODO Auto-generated method stub
 		super.finalize();

@@ -58,36 +58,36 @@ public class RichtZeit implements Objekt {
 		return id;
 	}
 
-	@Override
+	//@override
 	public boolean checkCollisionforObjekt(Vektor3D pos) {
 
 		return false;
 	}
 
-	@Override
+	//@override
 	public String getDescription() {
 		return "Bestimmt die Richtzeit des levels, in Sekunden.";
 	}
 
-	@Override
+	//@override
 	public Vektor3D getDimension() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	//@override
 	public int getID() {
 		// TODO Auto-generated method stub
 		return id;
 	}
 
-	@Override
+	//@override
 	public int getOptionCount() {
 		// TODO Auto-generated method stub
 		return 1;
 	}
 
-	@Override
+	//@override
 	public String getOptionDescription(int i) {
 		switch (i) {
 		case 0:
@@ -98,7 +98,7 @@ public class RichtZeit implements Objekt {
 		}
 	}
 
-	@Override
+	//@override
 	public int getOptionType(int i) {
 		switch (i) {
 		case 0:
@@ -109,7 +109,7 @@ public class RichtZeit implements Objekt {
 		}
 	}
 
-	@Override
+	//@override
 	public Object getOptionValue(int i) {
 		switch (i) {
 		case 0:
@@ -120,29 +120,29 @@ public class RichtZeit implements Objekt {
 		}
 	}
 
-	@Override
+	//@override
 	public Vektor3D getPosition() {
 		return position;
 	}
 
-	@Override
+	//@override
 	public int hurt(int by) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
+	//@override
 	public boolean isInWertebereich(int i, Object value) {
 
 		return true;
 	}
 
-	@Override
+	//@override
 	public void logic() {
 
 	}
 
-	@Override
+	//@override
 	public void render() {
 		if (Editor.isActualGameState()) {
 			OGL.verschieb(position);
@@ -153,7 +153,7 @@ public class RichtZeit implements Objekt {
 		OGL.setColor(myColor.WHITE);
 	}
 
-	@Override
+	//@override
 	public void setOptionValue(int i, Object value) {
 		switch (i) {
 		case 0:
@@ -165,17 +165,17 @@ public class RichtZeit implements Objekt {
 		}
 	}
 
-	@Override
+	//@override
 	public void setPosition(Vektor3D v) {
 		position = new v3(v.getX1(), SuperMain.level.getHeight(v), v.getX3());
 	}
 
-	@Override
+	//@override
 	public void setPositionDirectly(Vektor3D v) {
 		position = new v3(v);
 	}
 
-	@Override
+	//@override
 	public String toString() {
 		return "LevelRichtZeitObjekt";
 	}

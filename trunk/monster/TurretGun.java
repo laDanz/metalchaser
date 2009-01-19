@@ -59,7 +59,7 @@ public class TurretGun extends master implements RotateAble, RadarAble {
 			crit = new OpenAlClip("sound/critical.ogg");
 	}
 
-	@Override
+	//@override
 	public void initStats() {
 		// Arms
 		Damage = 2;
@@ -99,13 +99,13 @@ public class TurretGun extends master implements RotateAble, RadarAble {
 	/**
 	 * Simple Setter
 	 */
-	@Override
+	//@override
 	public void setDrehwinkel(int dreh) {
 		this.drehwinkel = dreh;
 
 	}
 
-	@Override
+	//@override
 	public boolean checkCollisionforObjekt(Vektor3D pos) {
 		if (isAlive())
 			return skelett.checkCollisionforObjekt(pos, getPosition());

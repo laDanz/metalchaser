@@ -102,7 +102,7 @@ public class Editor implements GameState, ParameterAble {
 		return "Editor";
 	}
 
-	@Override
+	//@override
 	public void doFinalizeActions() {
 		// TODO Auto-generated method stub
 

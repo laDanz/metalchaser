@@ -54,7 +54,7 @@ public class Data implements Serializable {
 		this.id = id2;
 	}
 
-	@Override
+	//@override
 	public boolean equals(Object obj) {
 		if (obj instanceof Data) {
 			Data other = ((Data) obj);

@@ -39,12 +39,12 @@ public class fuckingMonster extends monster.master implements RotateAble, RadarA
 			crit = new OpenAlClip("sound/pig.ogg");
 	}
 
-	@Override
+	//@override
 	public void setDrehwinkel(int dreh) {
 		this.rotation = dreh;
 	}
 
-	@Override
+	//@override
 	public boolean checkCollisionforObjekt(Vektor3D pos) {
 
 		return Geschoss.checkCollisionforObjektAsEllipse(this, pos);

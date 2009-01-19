@@ -201,7 +201,7 @@ public class Player implements Objekt {
 
 	private void onPlayerDead() {
 		new Thread() {
-			@Override
+			//@override
 			public void run() {
 				// LevelPlay onDeadAnimation()
 				boolean alreaddead = LevelPlay.onDeadAnimation();

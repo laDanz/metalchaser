@@ -398,7 +398,7 @@ public class Loot implements Equipment {
 	/**
 	 * Returns the correct type name of the item, or "Unknown Upgrade"
 	 */
-	@Override
+	//@override
 	public String toString() {
 		switch (type) {
 		case 0:

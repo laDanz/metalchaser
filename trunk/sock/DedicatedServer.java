@@ -24,18 +24,18 @@ public class DedicatedServer implements ConnectionListener {
 		server.addConnectionListener(this);
 	}
 
-	@Override
+	//@override
 	public void onClientDisconnected(Socket client) {
 		LevelPlay.InGameConsole.addText("Mecha weg");
 	}
 
-	@Override
+	//@override
 	public void onNewClient(Socket client) {
 		LevelPlay.InGameConsole.addText("neuer Mecha");
 
 	}
 
-	@Override
+	//@override
 	public void onReceivedFromClient(Socket client, Object obj) {
 
 		String message = null;

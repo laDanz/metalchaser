@@ -38,7 +38,7 @@ public class SchrottDrop implements Objekt, Serializable {
 
 	}
 
-	@Override
+	//@override
 	public boolean equals(Object obj) {
 		if (obj instanceof SchrottDrop) {
 			SchrottDrop new_name = (SchrottDrop) obj;

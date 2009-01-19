@@ -73,8 +73,8 @@ public class Mecha implements Serializable {
 	public static String new_state;
 
 	public int gesamt_punkt_zahl;
-	
-	OpenAlClip reload, heal;
+
+	static OpenAlClip reload, heal;
 
 	/**
 	 * Initialises Mecha with weapons, bag, stats and animations
@@ -91,10 +91,10 @@ public class Mecha implements Serializable {
 
 		initStats();
 		deleteTempValues();
-		
+
 		if (reload == null)
 			reload = new OpenAlClip("sound/reload.ogg");
-		
+
 		if (heal == null)
 			heal = new OpenAlClip("sound/heal.ogg");
 	}
@@ -1010,7 +1010,7 @@ public class Mecha implements Serializable {
 
 		new Thread() {
 
-			@Override
+			// @override
 			public void run() {
 				super.run();
 				// warten in Abhängigkeit von skill

@@ -82,7 +82,7 @@ public class MunPack implements Equipable {
 
 	}
 
-	@Override
+	//@override
 	public String toString() {
 		// TODO Auto-generated method stub
 		// return this.amount + " " + mun.toString();
