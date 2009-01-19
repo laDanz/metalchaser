@@ -121,7 +121,7 @@ public class HealthPackage implements Equipable, RechtsKlickAble {
 		return value + " Health";
 	}
 
-	@Override
+	//@override
 	public String toString() {
 		// TODO Auto-generated method stub
 		// return value + "er HPackage";

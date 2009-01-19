@@ -81,7 +81,7 @@ public class Object3Dputter implements Objekt, RotateAble {
 
 	}
 
-	@Override
+	//@override
 	public void setDrehwinkel(int dreh) {
 		this.rotation = dreh;
 	}

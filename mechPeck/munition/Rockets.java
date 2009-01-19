@@ -42,12 +42,12 @@ public class Rockets implements Munition {
 
 	}
 
-	@Override
+	//@override
 	public void setPiercing(int value) {
 		this.pierc = value;
 	}
 
-	@Override
+	//@override
 	public void setSchaden(int value) {
 		this.dmg = value;
 
@@ -104,13 +104,13 @@ public class Rockets implements Munition {
 		OGL.skaliere(scale.reziproke());
 	}
 
-	@Override
+	//@override
 	public String toString() {
 		// TODO Auto-generated method stub
 		return "Rockets";
 	}
 
-	@Override
+	//@override
 	public boolean equals(Object obj) {
 		if (obj instanceof Rockets) {
 			Rockets other = (Rockets) obj;

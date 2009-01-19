@@ -35,7 +35,7 @@ class Profilhandler extends DefaultHandler {
 		return p;
 	}
 
-	@Override
+	//@override
 	public void startDocument() {
 		// System.out.println("Document starts.");
 
@@ -44,7 +44,7 @@ class Profilhandler extends DefaultHandler {
 		t.start();
 	}
 
-	@Override
+	//@override
 	public void endDocument() {
 		// System.out.println("Document ends.");
 		int zeit = (int) t.ende();
@@ -52,7 +52,7 @@ class Profilhandler extends DefaultHandler {
 
 	}
 
-	@Override
+	//@override
 	public void endElement(String arg0, String arg1, String arg2) throws SAXException {
 
 		// System.out.println("</" + arg2 + ">");
@@ -60,7 +60,7 @@ class Profilhandler extends DefaultHandler {
 
 	}
 
-	@Override
+	//@override
 	public void startElement(String namespaceURI, String localName, String qName, Attributes atts) throws SAXException {
 
 		ssav = "";
@@ -71,7 +71,7 @@ class Profilhandler extends DefaultHandler {
 
 	}
 
-	@Override
+	//@override
 	public void characters(char[] ch, int start, int length) throws SAXException {
 		// System.out.print( "Inhalt: " );
 

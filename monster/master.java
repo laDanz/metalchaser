@@ -264,11 +264,11 @@ public class master implements Objekt {
 		// ExplodingSphere s = new ExplodingSphere(getDimension().mal(0.4),
 		// getPosition().add(
 		// new Vektor3D(0, getDimension().getX2() / 2., 0)), 2, 2);
-		
-		if (death == null)
-			death = new OpenAlClip("sound/explosion2.ogg");
-		
-		
+
+		// wont work !!!!! FIXME
+		// if (death == null)
+		// death = new OpenAlClip("sound/explosion2.ogg");
+
 		double b = 0;
 		try {
 			b = getDimension().getX2() / 2.;
@@ -276,7 +276,8 @@ public class master implements Objekt {
 			b = 1;
 		}
 		ExplodingParticles s = new ExplodingParticles(getPosition().add(new Vektor3D(0, b, 0)));
-		death.play();
+		if (death != null)
+			death.play();
 		SuperMain.level.addObjekt(s);
 		doDrop();
 

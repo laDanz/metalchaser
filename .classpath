@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="">
-		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MetalChaser1/native/linux"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="src" path=""/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/lwjgl_util.jar"/>
 	<classpathentry kind="lib" path="lib/audiolib/jogg-0.0.7.jar"/>
 	<classpathentry kind="lib" path="lib/audiolib/jorbis-0.0.15.jar"/>
 	<classpathentry kind="lib" path="lib/audiolib/tritonus_share.jar"/>
 	<classpathentry kind="lib" path="lib/audiolib/vorbisspi1.0.3.jar"/>
 	<classpathentry kind="lib" path="lib/lwjglrc2/lwjgl.jar">
 		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MetalChaser1/native/linux"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="mc1/native/linux"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/jogl.jar"/>
-	<classpathentry kind="lib" path="lib/lwjgl_util.jar"/>
 	<classpathentry kind="output" path=""/>
 </classpath>

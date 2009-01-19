@@ -46,7 +46,7 @@ public class EndState implements GameState, KeyListener {
 
 	}
 
-	@Override
+	//@override
 	public void doFinalizeActions() {
 		// TODO Auto-generated method stub
 
@@ -68,7 +68,7 @@ public class EndState implements GameState, KeyListener {
 
 	}
 
-	@Override
+	//@override
 	public void onKeyDown(int key) {
 		if (key == Keyboard.KEY_ESCAPE) {
 
@@ -80,7 +80,7 @@ public class EndState implements GameState, KeyListener {
 
 	}
 
-	@Override
+	//@override
 	public void onKeyUp(int key) {
 		if (key == Keyboard.KEY_ESCAPE) {
 
@@ -89,13 +89,13 @@ public class EndState implements GameState, KeyListener {
 
 	}
 
-	@Override
+	//@override
 	public void onMouseDown(int key) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+	//@override
 	public void onMouseUp(int key) {
 		// TODO Auto-generated method stub
 

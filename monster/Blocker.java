@@ -125,7 +125,7 @@ public class Blocker extends monster.master implements RotateAble, RadarAble {
 
 	}
 
-	@Override
+	//@override
 	public void setDrehwinkel(int dreh) {
 		this.rotation = dreh;
 
@@ -226,7 +226,7 @@ public class Blocker extends monster.master implements RotateAble, RadarAble {
 			this.caller_id = caller_id;
 		}
 
-		@Override
+		//@override
 		public boolean equals(Object obj) {
 			if (obj instanceof EnemyCaller) {
 				EnemyCaller new_name = (EnemyCaller) obj;
@@ -355,7 +355,7 @@ public class Blocker extends monster.master implements RotateAble, RadarAble {
 
 	// Für die Geschoss-Kollision vorgefertigte ellipsoide Annaeherung
 	// verwenden.
-	@Override
+	//@override
 	public boolean checkCollisionforObjekt(Vektor3D pos) {
 
 		// return skelett.checkCollisionforObjekt(pos.sub(getPosition()));
@@ -477,7 +477,7 @@ public class Blocker extends monster.master implements RotateAble, RadarAble {
 
 	}
 
-	@Override
+	//@override
 	public void doCriticalDamage() {
 		super.doCriticalDamage();
 		crit.play();

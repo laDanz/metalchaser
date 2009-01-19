@@ -71,7 +71,7 @@ public class AnimateIt implements GameState, KeyListener {
 		System.out.println("i --> invertieren");
 	}
 
-	@Override
+	//@override
 	public void doFinalizeActions() {
 		// TODO Auto-generated method stub
 

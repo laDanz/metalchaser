@@ -25,7 +25,7 @@ public class Shocker extends Blocker {
 		initStats();
 	}
 
-	@Override
+	//@override
 	public void initStats() {
 		// Arms
 		Damage = 0;
@@ -57,7 +57,7 @@ public class Shocker extends Blocker {
 	/**
 	 * Attack of the Monster
 	 */
-	@Override
+	//@override
 	public void doAttackRoutine() {
 		// TODO Auto-generated method stub
 		super.doAttackRoutine();
@@ -86,7 +86,7 @@ public class Shocker extends Blocker {
 		}
 	}
 
-	@Override
+	//@override
 	public String toString() {
 
 		return "Shocker";

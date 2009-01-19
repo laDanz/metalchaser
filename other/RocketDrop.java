@@ -34,17 +34,17 @@ public class RocketDrop extends master {
 		putted = false;
 	}
 
-	@Override
+	//@override
 	public String getDescription() {
 		return "Ein Packet Raketen";
 	}
 
-	@Override
+	//@override
 	public int getOptionCount() {
 		return 3;
 	}
 
-	@Override
+	//@override
 	public String getOptionDescription(int i) {
 		switch(i){
 			case 0: return "Amount";
@@ -54,12 +54,12 @@ public class RocketDrop extends master {
 		}
 	}
 
-	@Override
+	//@override
 	public int getOptionType(int i) {
 		return Objekt.INT;
 	}
 
-	@Override
+	//@override
 	public Object getOptionValue(int i) {
 		switch(i){
 			case 0:	return amount;
@@ -69,7 +69,7 @@ public class RocketDrop extends master {
 		}
 	}
 
-	@Override
+	//@override
 	public void logic() {
 		super.logic();
 
@@ -78,13 +78,13 @@ public class RocketDrop extends master {
 		}
 	}
 
-	@Override
+	//@override
 	public void render() {
 		super.render();
 
 	}
 
-	@Override
+	//@override
 	public void setOptionValue(int i, Object value) {
 		switch(i){
 			case 0: amount = (Integer) value; break;
@@ -94,7 +94,7 @@ public class RocketDrop extends master {
 		}
 	}
 
-	@Override
+	//@override
 	public boolean isInWertebereich(int i, Object value) {
 		return ((Integer) value) > 0;
 	}

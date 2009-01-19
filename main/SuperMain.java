@@ -645,7 +645,7 @@ public class SuperMain implements OGLable {
 	 */
 	class Fps extends Thread {
 
-		@Override
+		//@override
 		public void run() {
 			while (true) {
 				// Maximal 10% unterschied je sek zu lassen
@@ -695,7 +695,7 @@ public class SuperMain implements OGLable {
 
 		}
 
-		@Override
+		//@override
 		public void run() {
 
 			System.out.println("gs");

@@ -45,13 +45,13 @@ public class PigShells implements Munition {
 		return 100;
 	}
 
-	@Override
+	//@override
 	public void setPiercing(int value) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+	//@override
 	public void setSchaden(int value) {
 		// TODO Auto-generated method stub
 
@@ -78,7 +78,7 @@ public class PigShells implements Munition {
 		OGL.skaliere(scale.reziproke());
 	}
 
-	@Override
+	//@override
 	public String toString() {
 		// TODO Auto-generated method stub
 		return "Pig Shells";

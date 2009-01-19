@@ -794,7 +794,7 @@ public class quad implements Renderable {
 	public static Comparator<? super quad> TextureComparator() {
 
 		return new Comparator<quad>() {
-			@Override
+			//@override
 			public int compare(quad o1, quad o2) {
 
 				return o1.getTex() - o2.getTex();

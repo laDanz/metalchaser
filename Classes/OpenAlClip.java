@@ -426,7 +426,7 @@ public class OpenAlClip {
 			last_state = AL10.AL_INITIAL;
 		}
 
-		@Override
+		//@override
 		public void run() {
 			while (true) {
 				actualisePosition();

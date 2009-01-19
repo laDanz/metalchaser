@@ -16,7 +16,7 @@ public class Vektor2D extends Vektor3D {
 		this(add.getX1(), add.getX2());
 	}
 
-	@Override
+	//@override
 	public Vektor2D add(Vektor3D other) {
 
 		return new Vektor2D(super.add(other));

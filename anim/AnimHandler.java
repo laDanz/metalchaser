@@ -63,28 +63,28 @@ public class AnimHandler extends DefaultHandler {
 		return rotWS;
 	}
 
-	@Override
+	//@override
 	public void startDocument() {
 		ws = new WinkelSet();
 		t = new Zeit_messen();
 		t.start();
 	}
 
-	@Override
+	//@override
 	public void endDocument() {
 		int zeit = (int) t.ende();
 		// t.ausgabe();
 
 	}
 
-	@Override
+	//@override
 	public void endElement(String arg0, String arg1, String arg2) throws SAXException {
 
 		string_verarbeitung(arg2 + ": " + ssav);
 
 	}
 
-	@Override
+	//@override
 	public void startElement(String namespaceURI, String localName, String qName, Attributes atts) throws SAXException {
 
 		ssav = "";
@@ -94,7 +94,7 @@ public class AnimHandler extends DefaultHandler {
 
 	}
 
-	@Override
+	//@override
 	public void characters(char[] ch, int start, int length) throws SAXException {
 
 		for (int i = start; i < (start + length); i++) {

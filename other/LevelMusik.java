@@ -29,18 +29,18 @@ public class LevelMusik extends master implements Objekt {
 		return musik;
 	}
 
-	@Override
+	//@override
 	public String getDescription() {
 		return "Bistimmt den track der beim Level gespielt wird.";
 	}
 
-	@Override
+	//@override
 	public int getOptionCount() {
 		// TODO Auto-generated method stub
 		return 1;
 	}
 
-	@Override
+	//@override
 	public String getOptionDescription(int i) {
 		switch (i) {
 		case 0:
@@ -51,7 +51,7 @@ public class LevelMusik extends master implements Objekt {
 		}
 	}
 
-	@Override
+	//@override
 	public int getOptionType(int i) {
 		switch (i) {
 		case 0:
@@ -62,7 +62,7 @@ public class LevelMusik extends master implements Objekt {
 		}
 	}
 
-	@Override
+	//@override
 	public Object getOptionValue(int i) {
 		switch (i) {
 		case 0:
@@ -73,13 +73,13 @@ public class LevelMusik extends master implements Objekt {
 		}
 	}
 
-	@Override
+	//@override
 	public boolean isInWertebereich(int i, Object value) {
 
 		return true;
 	}
 
-	@Override
+	//@override
 	public void setOptionValue(int i, Object value) {
 		switch (i) {
 		case 0:
@@ -91,7 +91,7 @@ public class LevelMusik extends master implements Objekt {
 		}
 	}
 
-	@Override
+	//@override
 	public String toString() {
 		return "LevelMusikObjekt";
 	}

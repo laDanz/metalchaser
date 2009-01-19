@@ -186,7 +186,7 @@ public class Vektor3D implements Comparable<Vektor3D>, Serializable {
 		return new Vektor3D(1 / this.x1, 1 / this.x2, 1 / this.x3);
 	}
 
-	@Override
+	//@override
 	public boolean equals(Object obj) {
 		if (obj instanceof Vektor3D) {
 			Vektor3D new_name = (Vektor3D) obj;

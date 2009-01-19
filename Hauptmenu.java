@@ -23,7 +23,6 @@ public class Hauptmenu implements GameState {
 		once();
 	}
 
-	@Override
 	public void doFinalizeActions() {
 		// TODO Auto-generated method stub
 

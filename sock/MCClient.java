@@ -26,19 +26,19 @@ public class MCClient implements ConnectionListener {
 		client.addConnectionListener(this);
 	}
 
-	@Override
+	//@override
 	public void onClientDisconnected(Socket client) {
 		// Server hat gestopt!
 		LevelPlay.setState("MainMenu");
 	}
 
-	@Override
+	//@override
 	public void onNewClient(Socket client) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+	//@override
 	public void onReceivedFromClient(Socket client, final Object message) {
 		if (message instanceof Data) {
 			onReceivedFromClient(client, (Data) message);

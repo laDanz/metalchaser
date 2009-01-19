@@ -43,7 +43,7 @@ public class WaffenMaster implements Waffe {
 	 * 
 	 * @return is shooting possible?
 	 */
-	@Override
+	//@override
 	public boolean feuer() {
 		
 		if (getAktuellMunitionCount() <= 0) {
@@ -70,7 +70,7 @@ public class WaffenMaster implements Waffe {
 		return true;
 	}
 
-	@Override
+	//@override
 	public long getLastTimeFeuered() {
 		// TODO Auto-generated method stub
 		return last_time_feuerd;
@@ -95,7 +95,7 @@ public class WaffenMaster implements Waffe {
 	/**
 	 * Simple Getter
 	 */
-	@Override
+	//@override
 	public int getAmountperSlot() {
 
 		return amountperslot;
@@ -104,7 +104,7 @@ public class WaffenMaster implements Waffe {
 	/**
 	 * Simple Getter
 	 */
-	@Override
+	//@override
 	public Vektor3D getAustrittsPkt() {
 		// TODO Auto-generated method stub
 		return null;
@@ -113,7 +113,7 @@ public class WaffenMaster implements Waffe {
 	/**
 	 * Simple Getter
 	 */
-	@Override
+	//@override
 	public double getGenauigkeit() {
 		// TODO Auto-generated method stub
 		return 0;
@@ -122,13 +122,13 @@ public class WaffenMaster implements Waffe {
 	/**
 	 * Simple Getter
 	 */
-	@Override
+	//@override
 	public double getGewicht() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
+	//@override
 	public double getPreis() {
 		// TODO Auto-generated method stub
 		return 0;
@@ -137,7 +137,7 @@ public class WaffenMaster implements Waffe {
 	/**
 	 * Simple Getter
 	 */
-	@Override
+	//@override
 	public int getSlotCount() {
 		// TODO Auto-generated method stub
 		return slot_count;
@@ -160,7 +160,7 @@ public class WaffenMaster implements Waffe {
 	/**
 	 * Simple Getter
 	 */
-	@Override
+	//@override
 	public double getZustand() {
 		// TODO Auto-generated method stub
 		return 0;

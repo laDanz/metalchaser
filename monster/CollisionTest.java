@@ -14,13 +14,13 @@ public class CollisionTest extends master {
 		skelett = new SkelettSentry(getID());
 	}
 
-	@Override
+	//@override
 	public boolean checkCollisionforObjekt(Vektor3D pos) {
 		// TODO Auto-generated method stub
 		return skelett.checkCollisionforObjekt(pos, getPosition());
 	}
 
-	@Override
+	//@override
 	public void render() {
 		OGL.verschieb(position);
 		skelett.render(0, 45);

@@ -65,25 +65,25 @@ public class Laden implements GameState, KeyListener {
 
 	}
 
-	@Override
+	//@override
 	public void onKeyDown(int key) {
 		ready = (key == Keyboard.KEY_SPACE);
 
 	}
 
-	@Override
+	//@override
 	public void onKeyUp(int key) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+	//@override
 	public void onMouseDown(int key) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+	//@override
 	public void onMouseUp(int key) {
 		// TODO Auto-generated method stub
 
@@ -118,7 +118,7 @@ public class Laden implements GameState, KeyListener {
 
 	}
 
-	@Override
+	//@override
 	public void doFinalizeActions() {
 		last_instance = null;
 	}
@@ -239,7 +239,7 @@ public class Laden implements GameState, KeyListener {
 				// automatisch space drücken
 				LevelPlay.space_hitted = true;
 				SuperMain.toRun.add(new Runnable() {
-					@Override
+					//@override
 					public void run() {
 						Laden.last_instance = null;
 
@@ -275,7 +275,7 @@ public class Laden implements GameState, KeyListener {
 			this.gamestate = gamestate;
 		}
 
-		@Override
+		//@override
 		public void run() {
 
 			System.out.println("gs");
@@ -316,7 +316,7 @@ public class Laden implements GameState, KeyListener {
 	public static void renderHitSpace() {
 		if (last_instance.render_hit_space == false) {
 			SuperMain.toRun.add(new Runnable() {
-				@Override
+				//@override
 				public void run() {
 					Laden.addText("-Hit Space-");
 				}
@@ -331,7 +331,7 @@ public class Laden implements GameState, KeyListener {
 
 // Punkte reinsetzten
 // insertdotthread = new Thread() {
-// @Override
+// //@override
 // public void run() {
 //
 // while (true) {
