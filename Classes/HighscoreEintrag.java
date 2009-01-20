@@ -469,7 +469,7 @@ public class HighscoreEintrag implements Serializable {
 	private static Comparator<? super Vector<Object>> getHighscoreComparator() {
 
 		return new Comparator<Vector<Object>>() {
-			//@override
+			// @override
 			public int compare(Vector<Object> o1, Vector<Object> o2) {
 				if (o1.size() != 2 || o2.size() != 2) {
 					throw new RuntimeException("Wrong length!");
@@ -494,25 +494,36 @@ public class HighscoreEintrag implements Serializable {
 			return highscores.toArray(new String[0]);
 
 		LinkedList<Object> result = new LinkedList<Object>();
-		String url_to_show = "http://superwg.kicks-ass.net/highscore.php";
+		String url_to_show = "http://metalchaser.saso-labs.com/hp/pages/highscore.php";
 
 		URLConnection con;
 		try {
 			con = new URL(url_to_show).openConnection();
-			InputStream is = con.getInputStream();
-			BufferedReader r = new BufferedReader(new InputStreamReader(is));
+			con.setDoOutput(true);
+			OutputStreamWriter wr = new OutputStreamWriter(con.getOutputStream());
+			wr.write("plain=1");
+			wr.flush();
+
+			// Get the response
+			BufferedReader rd = new BufferedReader(new InputStreamReader(con.getInputStream()));
 			String inputLine;
-			while ((inputLine = r.readLine()) != null) {
-				// <br> rausschmeißen
-				if (inputLine.startsWith("<img")) {
+			while ((inputLine = rd.readLine()) != null) {
+				if (inputLine.startsWith("<") || inputLine.length() < 3)
 					continue;
+
+				for (String s : inputLine.split("<br />")) {
+					if (s.startsWith("<"))
+						continue;
+					while (s.startsWith(" "))
+						s = s.substring(1);
+					result.add(s);
+					// System.out.println(s);
 				}
-				inputLine = inputLine.replace("<br>", "");
-				if (inputLine.length() > 1) {
-					result.add(inputLine);
-				}
+
 			}
-			r.close();
+
+			wr.close();
+			rd.close();
 			saveInternetHighscoreAsTempFile(result);
 			ERROR = ER_NONE;
 		} catch (MalformedURLException e) {
