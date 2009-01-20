@@ -207,16 +207,15 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 			walk0 = new OpenAlClip("sound/walk/walk1.ogg");
 			walk1 = new OpenAlClip("sound/walk/walk2.ogg");
 		}
-		
-		if (pickup == null) 
-			pickup = new OpenAlClip("sound/pickup.ogg");
-		
-		if (dead == null) 
-			dead = new OpenAlClip("sound/dead.ogg");
-		
-		if (zielerreicht == null) 
-			zielerreicht = new OpenAlClip("sound/finished.ogg");
 
+		if (pickup == null)
+			pickup = new OpenAlClip("sound/pickup.ogg");
+
+		if (dead == null)
+			dead = new OpenAlClip("sound/dead.ogg");
+
+		if (zielerreicht == null)
+			zielerreicht = new OpenAlClip("sound/finished.ogg");
 
 		Laden.addText("init Models");
 		// Models initialisieren
@@ -318,7 +317,7 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 
 	private Runnable onStartLevel() {
 		return new Runnable() {
-			//@override
+			// @override
 			public void run() {
 				SuperMain.statistics.setStartTime();
 				// Health nochmal updaten
@@ -439,7 +438,7 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 			if (o.getClass().toString().equals("class other.LevelMusik")) {
 				musik = new OpenAlClip(SuperMain.ordner + ((LevelMusik) o).getMusikFile());
 				musik.addEndAction(new Runnable() {
-					//@override
+					// @override
 					public void run() {
 						musik.play();
 
@@ -462,7 +461,7 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 		musik.play();
 	}
 
-	//@override
+	// @override
 	public void doFinalizeActions() {
 		if (musik != null)
 			musik.stop();
@@ -479,7 +478,10 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 
 	public static void setState(String newstate) {
 		state = newstate;
-		GL11.glDisable(GL11.GL_LIGHTING);
+		try {
+			GL11.glDisable(GL11.GL_LIGHTING);
+		} catch (NullPointerException e) {// dont know why FIXME
+		}
 	}
 
 	/**
@@ -1200,9 +1202,9 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 			GL11.glEnable(GL11.GL_LIGHTING);
 		else
 			GL11.glDisable(GL11.GL_LIGHTING);
-		
+
 		GL11.glEnable(GL11.GL_CULL_FACE);
-		
+
 		// setLightPos(GL11.GL_LIGHT1, 50, 20, -50);
 		// taschenlampe
 		// setLightPos(GL11.GL_LIGHT0, (float) p.getPosition().getX1(), (float)
@@ -1611,6 +1613,9 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 							} else {
 								color = myColor.WHITE;
 							}
+							if (out.length() > 27) {
+								out = out.substring(0, 26);
+							}
 							myText.out(out, new v3(1 * cm, 1 * cm - (1 * cm) * i, 0), new v3(0.4 * cm, 0.5 * cm,
 									0.5 * cm), color, 1.1, 0);
 							i++;
@@ -1920,7 +1925,7 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 			if (SuperMain.statistics.getLevel().endsWith("4.xml")) {
 				// war das letzte level--> Highscore eintrag!
 				new Thread() {
-					//@override
+					// @override
 					public void run() {
 						super.run();
 						laden = new Laden();
@@ -1951,11 +1956,15 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 		// für jedes level eine statistik laden
 		Statistics[] stat = new Statistics[5];
 		long[] dates = new long[5];
+		int i = 0;
 		for (Statistics st : Statistics.loadAllStatistics()) {
-			int levelnr = Integer
-					.parseInt(st.getLevel().split("/")[st.getLevel().split("/").length - 1].split("[.]")[0]
-							.split("level")[1]);
+			// int levelnr = Integer
+			// .parseInt(st.getLevel().split("/")[st.getLevel().split("/").length
+			// - 1].split("[.]")[0]
+			// .split("level")[1]);
+			int levelnr = i;
 			stat[levelnr] = st;
+			i++;
 		}
 
 		// Highscore eintrag erstellen und speichern
@@ -1999,7 +2008,7 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 	 * @return The old state of the death animation.
 	 */
 	public static boolean onDeadAnimation() {
-		//dead.play();
+		// dead.play();
 		boolean old = deadanimation;
 		deadanimation = true;
 		// hud einziehen

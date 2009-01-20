@@ -2,7 +2,6 @@ package monster;
 
 import main.SuperMain;
 import mechPeck.equipment.HealthPackage;
-import mechPeck.munition.Ammo;
 import mechPeck.munition.MunPack;
 import mechPeck.munition.PigShells;
 import Classes.Geschoss;
@@ -14,7 +13,6 @@ import Classes.RotateAble;
 import Classes.Vektor3D;
 import Classes.v3;
 import drops.EquipDrop;
-import drops.HealthDrop;
 import drops.VerteilbarePunkteDrop;
 
 public class fuckingMonster extends monster.master implements RotateAble, RadarAble {
@@ -35,16 +33,23 @@ public class fuckingMonster extends monster.master implements RotateAble, RadarA
 			object = new Object3D("models/more_models/pig.obj", "img/textures/skin-pink.jpg");
 		ChangeWaybyTimeThread = null;
 		Health = 5;
-		if (crit == null)
-			crit = new OpenAlClip("sound/pig.ogg");
+
+		try {
+			if (crit == null)
+				crit = new OpenAlClip("sound/pig.ogg");
+		} catch (Exception ex) {
+			// Unsupported Conversion!
+
+			// FIXME
+		}
 	}
 
-	//@override
+	// @override
 	public void setDrehwinkel(int dreh) {
 		this.rotation = dreh;
 	}
 
-	//@override
+	// @override
 	public boolean checkCollisionforObjekt(Vektor3D pos) {
 
 		return Geschoss.checkCollisionforObjektAsEllipse(this, pos);
@@ -76,11 +81,12 @@ public class fuckingMonster extends monster.master implements RotateAble, RadarA
 
 	public void onDeath() {
 		// SuperMain.addDrop(new SchrottDrop(this));
-		//SuperMain.addDrop(new HealthDrop((int) (10), position));
+		// SuperMain.addDrop(new HealthDrop((int) (10), position));
 		SuperMain.addDrop(new VerteilbarePunkteDrop(position, 1));
-		SuperMain.addDrop(new EquipDrop(position, new MunPack(1 + (int) (100 * Math.random()+100), new PigShells()),
+		SuperMain.addDrop(new EquipDrop(position, new MunPack(1 + (int) (100 * Math.random() + 100), new PigShells()),
 				new HealthPackage(10)));
-		crit.play();
+		if (crit != null)
+			crit.play();
 
 	}
 
