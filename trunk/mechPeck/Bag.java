@@ -18,7 +18,6 @@ import main.SuperMain;
 import mechPeck.equipment.HealthPackage;
 import mechPeck.munition.Ammo;
 import mechPeck.munition.MunPack;
-import mechPeck.munition.PigShells;
 import mechPeck.munition.Rockets;
 
 import org.lwjgl.input.Mouse;
@@ -116,7 +115,7 @@ public class Bag implements Serializable {
 
 		put(new MunPack(500, new Ammo()));
 		put(new MunPack(20, new Rockets()));
-		//put(new MunPack(20, new PigShells()));
+		// put(new MunPack(20, new PigShells()));
 
 	}
 
@@ -456,7 +455,7 @@ public class Bag implements Serializable {
 					selected_item = items.get(selection - item_start);
 				} catch (IndexOutOfBoundsException e) {
 					// Anscheinend doch kein Item ?!?
-					System.err.println("onMouseDown() IndexOutOfBounds Exception");
+					System.err.println("onMouseDown() IndexOutOfBounds Exception- in Bag Z 459");
 					return;
 				}
 				// System.out.println("Item selected: " + SuperMain.selection);

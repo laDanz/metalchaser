@@ -1,0 +1,5 @@
+wenn man nach ogg konvertiert muessen alle dateien wie folgt sein:
+
+Abtastrate: 44100
+Bitrate:112
+Kanäle:2

@@ -72,12 +72,16 @@ public class OpenAlClip {
 
 	private boolean failed = false;
 
+	public OpenAlClip(String filename) {
+		this(filename, 2);
+	}
+
 	/**
 	 * Prepares & Loads all necessary sound data from the file.
 	 * 
 	 * @param filename
 	 */
-	public OpenAlClip(String filename) {
+	public OpenAlClip(String filename, int channel) {
 
 		startAction = new LinkedList<Runnable>();
 		endAction = new LinkedList<Runnable>();
@@ -93,7 +97,7 @@ public class OpenAlClip {
 		listenerOri.flip();
 
 		// Load the wav data.
-		if (loadALData(filename) == AL10.AL_FALSE) {
+		if (loadALData(filename, channel) == AL10.AL_FALSE) {
 			System.out.println("Error loading data.");
 			// kill this instance
 			failed = true;
@@ -125,6 +129,10 @@ public class OpenAlClip {
 		endAction.add(action);
 	}
 
+	int loadALData(String filename) {
+		return loadALData(filename, 2);
+	}
+
 	/**
 	 * boolean LoadALData()
 	 * 
@@ -132,7 +140,7 @@ public class OpenAlClip {
 	 * utility and send the data into OpenAL as a buffer. A source is then also
 	 * created to play that buffer.
 	 */
-	int loadALData(String filename) {
+	int loadALData(String filename, int Channel) {
 		if (!OPENAL_INIT) {
 			return AL10.AL_FALSE;
 		}
@@ -170,8 +178,8 @@ public class OpenAlClip {
 
 			if (in != null) {
 				AudioFormat baseFormat = in.getFormat();
-				AudioFormat af = new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, 44100, 16, 2, 2 * 2, baseFormat
-						.getSampleRate(), false);
+				AudioFormat af = new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, 44100, 16, Channel,
+						Channel * Channel, baseFormat.getSampleRate(), false);
 				// das eigentliche umkodieren
 				AudioInputStream din = null;
 				try {
@@ -426,7 +434,7 @@ public class OpenAlClip {
 			last_state = AL10.AL_INITIAL;
 		}
 
-		//@override
+		// @override
 		public void run() {
 			while (true) {
 				actualisePosition();
