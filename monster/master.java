@@ -61,6 +61,11 @@ public class master implements Objekt {
 			e.printStackTrace();
 			SuperMain.out(e);
 		}
+		if (crit == null)
+			crit = new OpenAlClip("sound/critical.ogg");
+
+		if (death == null)// FIXME schlechte sound datei
+			death = new OpenAlClip("sound/explosion2.ogg", 1);
 	}
 
 	/**
@@ -260,14 +265,6 @@ public class master implements Objekt {
 	 * OnDeath event (drops, etc...)
 	 */
 	public void onDeath() {
-		// TODO Death Animation
-		// ExplodingSphere s = new ExplodingSphere(getDimension().mal(0.4),
-		// getPosition().add(
-		// new Vektor3D(0, getDimension().getX2() / 2., 0)), 2, 2);
-
-		// wont work !!!!! FIXME
-		// if (death == null)
-		// death = new OpenAlClip("sound/explosion2.ogg");
 
 		double b = 0;
 		try {
@@ -409,8 +406,9 @@ public class master implements Objekt {
 	}
 
 	public void doCriticalDamage() {
-		if (crit == null)
-			crit = new OpenAlClip("sound/critical.ogg");
+		if (crit != null) {
+			crit.play();
+		}
 		// TODO Auto-generated method stub
 
 	}
