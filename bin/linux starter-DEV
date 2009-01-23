@@ -1,6 +1,0 @@
-#!/bin/bash
-cd data
-java -Xms512m -Xmx512m -Djava.library.path="native/linux" -cp lib/audiolib/vorbisspi1.0.3.jar:lib/audiolib/tritonus_share.jar:lib/audiolib/jorbis-0.0.15.jar:lib/audiolib/jogg-0.0.7.jar:lib/jogl.jar:lib/lwjglrc2/lwjgl.jar:lib/lwjgl_util.jar:. main.SuperMain dev
-
-exit
-
