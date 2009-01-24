@@ -1,0 +1,11 @@
+#summary Wo bewerben wir Wie?
+
+Hier sollte nochmal die Vertriebspolitik geklärt werden.
+
+Damit wir keine Leute doppelt anschreiben oder so, hier eine Aufstellung, wer wen anschreibt.
+
+|| Wer || Wen ||
+|| laDanz || lwjgl.org, pro-linux.org   ||
+|| paule ||   ||
+|| pogge ||   ||
+|| jannek ||   ||
