@@ -122,7 +122,7 @@ public class MainMenu implements GameState {
 			introO = new OpenAlClip(SuperMain.ordner + "sound/intro.ogg");
 			// danach intro2 abspielen
 			introO.addEndAction(new Runnable() {
-				//@override
+				// @override
 				public void run() {
 					introO2.play();
 
@@ -133,7 +133,7 @@ public class MainMenu implements GameState {
 			introO2 = new OpenAlClip(SuperMain.ordner + "sound/menutheme.ogg");
 			// Loop
 			introO2.addEndAction(new Runnable() {
-				//@override
+				// @override
 				public void run() {
 					introO2.play();
 
@@ -206,7 +206,7 @@ public class MainMenu implements GameState {
 
 	private Runnable onPrevProv() {
 		return new Runnable() {
-			//@override
+			// @override
 			public void run() {
 				// index des gerade ausgewaehlten profils
 				int old = profile.indexOf(SuperMain.profil);
@@ -223,7 +223,7 @@ public class MainMenu implements GameState {
 	private Runnable onNextProv() {
 
 		return new Runnable() {
-			//@override
+			// @override
 			public void run() {
 				// index des gerade ausgewaehlten profils
 				int old = profile.indexOf(SuperMain.profil);
@@ -240,7 +240,7 @@ public class MainMenu implements GameState {
 	// FIXME umbauen!
 	private Runnable onResume() {
 		return new Runnable() {
-			//@override
+			// @override
 			public void run() {
 				// Aus den gespeicherten scores rausfinden bei welchem level wir
 				// gerade sind.
@@ -274,7 +274,7 @@ public class MainMenu implements GameState {
 		};
 	}
 
-	//@override
+	// @override
 	public void doFinalizeActions() {
 		// TODO Auto-generated method stub
 
@@ -466,9 +466,12 @@ public class MainMenu implements GameState {
 
 				state = "LevelPlay,level/level0.xml";
 				SuperMain.toRun.add(new Runnable() {
-					//@override
+					// @override
 					public void run() {
-						Profil.mecha.nachladen();
+						// nachladen Q&D
+						Profil.mecha.nachladen(false, false);
+						Profil.mecha.nachladen(false, false);
+						Profil.mecha.nachladen(false, false);
 
 					}
 				});
@@ -881,7 +884,7 @@ public class MainMenu implements GameState {
 	public void once() {
 
 		new Thread() {
-			//@override
+			// @override
 			public void run() {
 				HighscoreEintrag.writeLocaltoOnline();
 			}
