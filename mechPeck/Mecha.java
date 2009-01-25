@@ -1007,6 +1007,10 @@ public class Mecha implements Serializable {
 	}
 
 	public void nachladen() {
+		nachladen(true, true);
+	}
+
+	public void nachladen(final boolean waitingtime, final boolean playsound) {
 
 		new Thread() {
 
@@ -1014,9 +1018,13 @@ public class Mecha implements Serializable {
 			public void run() {
 				super.run();
 				// warten in Abhängigkeit von skill
-				reload.play();
+				if (playsound) {
+					reload.play();
+				}
 				try {
-					this.sleep((int) (10000 / getReloadingTime()));
+					if (waitingtime) {
+						this.sleep((int) (10000 / getReloadingTime()));
+					}
 				} catch (InterruptedException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
