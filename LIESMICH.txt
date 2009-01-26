@@ -14,7 +14,7 @@ Datum: 29.10.2008
 
 Um MetalChaser flüssig zu spielen werden mindestens folgende Hardwarespezifikationen benoetigt:
 		-Mindestens ca. 1 GB RAM
-		-Grafikkarte mit ca. 265 MB Speicher
+		-Grafikkarte mit ca. 256 MB Speicher
 		-ca. 40 MB Festplattenspeicher
 
 Es kann sein, dass das Spiel auch auf schlechterer Hardware laeuft, aber das wird lange Ladezeiten und Ruckler beinhalten.		

@@ -5,7 +5,6 @@ import java.util.LinkedList;
 import main.LevelPlay;
 import main.SuperMain;
 import mechPeck.Equipable;
-import Classes.OpenAlClip;
 import Classes.Vektor3D;
 
 /**
@@ -22,9 +21,9 @@ public class EquipDrop extends SchrottDrop {
 	/**
 	 * 
 	 * @param pos
- *            3D position
+	 *            3D position
 	 * @param equip
- *            equipment
+	 *            equipment
 	 */
 	public EquipDrop(Vektor3D pos, Equipable... equip) {
 		super(pos);
@@ -35,9 +34,10 @@ public class EquipDrop extends SchrottDrop {
 			res.add(o);
 		}
 		loot = res.toArray(new Equipable[0]);
-		
-		if (pickup == null)
-			pickup = new OpenAlClip("sound/pickup.ogg");
+
+		// DUDE masterfile already does this!
+		// if (pickup == null)
+		// pickup = new OpenAlClip("sound/pickup.ogg");
 
 	}
 
@@ -78,7 +78,7 @@ public class EquipDrop extends SchrottDrop {
 
 		loot = rest.toArray(new Equipable[0]);
 
-		if (loot.length == 0){
+		if (loot.length == 0) {
 			SuperMain.removeDrop(this);
 			pickup.play();
 		}

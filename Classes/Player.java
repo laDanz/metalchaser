@@ -201,9 +201,10 @@ public class Player implements Objekt {
 
 	private void onPlayerDead() {
 		new Thread() {
-			//@override
+			// @override
 			public void run() {
 				// LevelPlay onDeadAnimation()
+				this.setName("EIG-Player DeadWaitThread");
 				boolean alreaddead = LevelPlay.onDeadAnimation();
 				if (alreaddead)
 					return;

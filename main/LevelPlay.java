@@ -181,7 +181,7 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 	static boolean space_hitted;
 
 	@SuppressWarnings("deprecation")
-	/**
+	/*
 	 * Constructor
 	 */
 	public LevelPlay() {
@@ -215,7 +215,7 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 			dead = new OpenAlClip("sound/dead.ogg");
 
 		if (zielerreicht == null)
-			zielerreicht = new OpenAlClip("sound/finished.ogg");
+			zielerreicht = new OpenAlClip("sound/dedededeDEDE.wav");
 
 		Laden.addText("init Models");
 		// Models initialisieren
@@ -459,6 +459,9 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 		Laden.renderHitSpace();
 		MainMenu.stopIntroMusic();
 		musik.play();
+
+		if (true)
+			System.out.println("Nach Level geladen: " + Runtime.getRuntime().freeMemory() / (1024 * 1024));
 	}
 
 	// @override
@@ -1246,8 +1249,9 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 		GL11.glEnable(GL11.GL_LIGHTING);
 
 		// ######## PLAYER
+		GL11.glDisable(GL11.GL_CULL_FACE);
 		p.render(hueftwinkel);
-
+		GL11.glEnable(GL11.GL_CULL_FACE);
 		for (Player enem : enemy) {
 			enem.render();
 		}
@@ -1257,7 +1261,7 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 		}
 		/*
 		 * Laserpointer { Vektor3D endpoint = Level.getSelectedPosition();
-		 * Vektor3D richtung = new v3(-1 *
+		 * Vektor3D richtung = new v3(-1
 		 * Math.sin(Math.toRadians(LevelPlay.p.blickrichtung + 0)), -1
 		 * Math.sin(Math.toRadians(LevelPlay.p.yblick)), -1
 		 * Math.cos(Math.toRadians(LevelPlay.p.blickrichtung))).normierter(); if
@@ -1366,9 +1370,9 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 		// Fadenkreuz
 		if (!deadanimation) {
 			/*
-			 * OGL.setColor(myColor.GREEN); OGL.line(1, new v3(10. * cm, 7.59 *
-			 * cm, 0), new v3(11 * cm, 7.59 * cm, 0)); OGL.line(1, new v3(10.5 *
-			 * cm, 7.59 * cm, 0), new v3(10.5 * cm, 7.09 * cm, 0));
+			 * OGL.setColor(myColor.GREEN); OGL.line(1, new v3(10. cm, 7.59 cm,
+			 * 0), new v3(11 cm, 7.59 cm, 0)); OGL.line(1, new v3(10.5 cm, 7.59
+			 * cm, 0), new v3(10.5 cm, 7.09 cm, 0));
 			 * OGL.setColor(myColor.WHITE);
 			 */
 			zielkreuz.setFarbverlauf(myColor.GREEN, myColor.RED, zielkreuzfalt);
@@ -1553,9 +1557,9 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 
 					/*
 					 * Geht nicht in die Score ein... myText.out("Damage
-					 * (dealt/taken): " + SuperMain.statistics.getDamageGiven() +
-					 * "/" + SuperMain.statistics.getDamageTaken(), new v3(1 *
-					 * cm, -4 * cm, 0), new v3(0.4 * cm,0.5 * cm, 0.5 * cm),
+					 * (dealt/taken): " + SuperMain.statistics.getDamageGiven()
+					 * + "/" + SuperMain.statistics.getDamageTaken(), new v3(1
+					 * cm, -4 cm, 0), new v3(0.4 cm,0.5 cm, 0.5 cm),
 					 * myColor.WHITE, 1.1, 0);
 					 */
 
@@ -1926,7 +1930,9 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 				// war das letzte level--> Highscore eintrag!
 				new Thread() {
 					// @override
+
 					public void run() {
+						this.setName("EIG-LevPlay HSeintrag");
 						super.run();
 						laden = new Laden();
 						try {

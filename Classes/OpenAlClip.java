@@ -72,6 +72,12 @@ public class OpenAlClip {
 
 	private boolean failed = false;
 
+	private boolean DEBUG = false;
+
+	String filename;
+
+	StateWatcher stateWatcher;
+
 	public OpenAlClip(String filename) {
 		this(filename, 2);
 	}
@@ -82,7 +88,7 @@ public class OpenAlClip {
 	 * @param filename
 	 */
 	public OpenAlClip(String filename, int channel) {
-
+		this.filename = filename;
 		startAction = new LinkedList<Runnable>();
 		endAction = new LinkedList<Runnable>();
 		forcedstop = false;
@@ -97,15 +103,22 @@ public class OpenAlClip {
 		listenerOri.flip();
 
 		// Load the wav data.
-		if (loadALData(filename, channel) == AL10.AL_FALSE) {
+		if (!DEBUG && loadALData(filename, channel) == AL10.AL_FALSE) {
 			System.out.println("Error loading data.");
 			// kill this instance
 			failed = true;
+			killALData();
 			return;
 		}
+		if (DEBUG) {
+			failed = true;
+		}
 
-		setListenerValues();
-		new StateWatcher().start();
+		if (!failed) {
+			setListenerValues();
+			stateWatcher = new StateWatcher();
+			stateWatcher.start();
+		}
 		failed = false;
 	}
 
@@ -152,10 +165,14 @@ public class OpenAlClip {
 
 		// Fileformat depending
 		if (filename.toLowerCase().endsWith(".wav")) {
-
-			WaveData waveFile = WaveData.create(filename);
-			AL10.alBufferData(buffer.get(0), waveFile.format, waveFile.data, waveFile.samplerate);
-			waveFile.dispose();
+			try {
+				WaveData waveFile = WaveData.create(filename);
+				AL10.alBufferData(buffer.get(0), waveFile.format, waveFile.data, waveFile.samplerate);
+				waveFile.dispose();
+			} catch (Exception e) {
+				// on some systems (LinuxMint)buggy
+				return AL10.AL_FALSE;
+			}
 
 		} else if (filename.toLowerCase().endsWith("ogg")) {
 			// Erst dekodieren
@@ -186,7 +203,7 @@ public class OpenAlClip {
 					din = AudioSystem.getAudioInputStream(af, in);
 				} catch (IllegalArgumentException e) {
 					// bei konvertierungsfehlern! falsche channel oder so
-					e.printStackTrace();
+					System.err.println("Audio Konvertierungsfehler: " + e.toString());
 					return AL10.AL_FALSE;
 				}
 
@@ -335,6 +352,7 @@ public class OpenAlClip {
 		if (failed) {
 			return;
 		}
+
 		myGain = 1;
 		minus_per_tick = 0;
 		AL10.alSourcePlay(source.get(0));
@@ -361,6 +379,7 @@ public class OpenAlClip {
 		}
 		forcedstop = true;
 		AL10.alSourceStop(source.get(0));
+
 	}
 
 	public void fadeOut(int seconds) {
@@ -428,20 +447,24 @@ public class OpenAlClip {
 
 	class StateWatcher extends Thread {
 		int last_state;
+		public boolean running;
 
 		public StateWatcher() {
 			super();
+
 			last_state = AL10.AL_INITIAL;
+			this.setName("EIG-OpenAL SW " + filename);
 		}
 
 		// @override
 		public void run() {
-			while (true) {
+			float newgain = myGain;
+			running = true;
+			while (running) {
 				actualisePosition();
 
 				// gain an globalen gain anpassen!
 
-				float newgain = myGain;
 				try {
 					if (MainMenu.intern_state == MainMenu.Einstellungen) {
 						newgain = (float) (myGain * MainMenu.temp_profil.getSound_gain() / 10.);
@@ -457,6 +480,7 @@ public class OpenAlClip {
 				int current_state = AL10.alGetSourcei(source.get(0), AL10.AL_SOURCE_STATE);
 
 				if (current_state == AL10.AL_STOPPED && last_state != current_state) {
+
 					// es wurde gerade gestoppt
 					if (forcedstop) {
 						// gewolltes ende
@@ -477,6 +501,7 @@ public class OpenAlClip {
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
+					return;
 				}
 			}
 		}
