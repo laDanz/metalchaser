@@ -252,9 +252,11 @@ public class Laden implements GameState, KeyListener {
 		} else {
 			// Wenn Hintergrund ist
 			{
-				String s_ = text.getLast();
-				if (!((s_.startsWith("-Hit S") && SuperMain.fps < 40 && SuperMain.fps > 10))) {
-					myText.out(s_, new Vektor3D(8.5 * cm, 1.7 * cm, 0), scale, new Vektor3D(1, 1, 1), 1.1, 0);
+				if (text != null && text.size() > 0) {
+					String s_ = text.getLast();
+					if (!((s_.startsWith("-Hit S") && SuperMain.fps < 40 && SuperMain.fps > 10))) {
+						myText.out(s_, new Vektor3D(8.5 * cm, 1.7 * cm, 0), scale, new Vektor3D(1, 1, 1), 1.1, 0);
+					}
 				}
 
 			}
