@@ -402,17 +402,17 @@ public class Loot implements Equipment {
 	public String toString() {
 		switch (type) {
 		case 0:
-			return "Arms Upgrade";
+			return "Arms Upgr";
 		case 1:
-			return "Elec Upgrade";
+			return "Elec Upgr";
 		case 2:
-			return "Hydr Upgrade";
+			return "Hydr Upgr";
 		case 3:
-			return "Mech Upgrade";
+			return "Mech Upgr";
 		case 4:
-			return "Prot Upgrade";
+			return "Prot Upgr";
 		default:
-			return "Unknown Upgrade";
+			return "Unknown Upgr";
 		}
 	}
 

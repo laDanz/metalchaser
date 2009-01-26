@@ -54,9 +54,9 @@ public class EquipmentDrop extends master {
 	public String getOptionDescription(int i) {
 		switch(i){
 			case 0: return "EquipType";
-			case 1: return "Damage";
-			case 2: return "Piercing";
-			case 3: return "Critical";
+			case 1: return "Option 1";
+			case 2: return "Option 2";
+			case 3: return "Option 3";
 
 			default: return "Unknown Option";
 		}
