@@ -27,7 +27,7 @@ public class Laden implements GameState, KeyListener {
 	String s = "...";
 	GameState gs;
 	static Texture tex = null;
-	Texture background = null;
+	static Texture background = null;
 	String state = "0";
 	static Laden last_instance = null;
 	private static boolean ready;
@@ -65,25 +65,25 @@ public class Laden implements GameState, KeyListener {
 
 	}
 
-	//@override
+	// @override
 	public void onKeyDown(int key) {
 		ready = (key == Keyboard.KEY_SPACE);
 
 	}
 
-	//@override
+	// @override
 	public void onKeyUp(int key) {
 		// TODO Auto-generated method stub
 
 	}
 
-	//@override
+	// @override
 	public void onMouseDown(int key) {
 		// TODO Auto-generated method stub
 
 	}
 
-	//@override
+	// @override
 	public void onMouseUp(int key) {
 		// TODO Auto-generated method stub
 
@@ -118,7 +118,7 @@ public class Laden implements GameState, KeyListener {
 
 	}
 
-	//@override
+	// @override
 	public void doFinalizeActions() {
 		last_instance = null;
 	}
@@ -127,6 +127,8 @@ public class Laden implements GameState, KeyListener {
 	 * @deprecated
 	 */
 	public Laden(String gamestate) {
+		if (true)
+			throw new RuntimeException("NotSupported!!! Laden#130");
 		this.once();
 
 		t2 T2 = new t2(gamestate);
@@ -239,7 +241,7 @@ public class Laden implements GameState, KeyListener {
 				// automatisch space drücken
 				LevelPlay.space_hitted = true;
 				SuperMain.toRun.add(new Runnable() {
-					//@override
+					// @override
 					public void run() {
 						Laden.last_instance = null;
 
@@ -275,7 +277,7 @@ public class Laden implements GameState, KeyListener {
 			this.gamestate = gamestate;
 		}
 
-		//@override
+		// @override
 		public void run() {
 
 			System.out.println("gs");
@@ -316,7 +318,7 @@ public class Laden implements GameState, KeyListener {
 	public static void renderHitSpace() {
 		if (last_instance.render_hit_space == false) {
 			SuperMain.toRun.add(new Runnable() {
-				//@override
+				// @override
 				public void run() {
 					Laden.addText("-Hit Space-");
 				}

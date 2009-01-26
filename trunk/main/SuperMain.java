@@ -144,6 +144,8 @@ public class SuperMain implements OGLable {
 
 	static boolean windowsmode;
 
+	static boolean MEMORY_DEBUG = true;
+
 	@SuppressWarnings("deprecation")
 	public SuperMain() {
 		if (arg == null) {
@@ -469,12 +471,20 @@ public class SuperMain implements OGLable {
 			gamestate.logic();
 		else {
 			// state finalisieren lassen
+			if (MEMORY_DEBUG)
+				System.out.println("Vor GameStateFinalisierung: " + Runtime.getRuntime().freeMemory() / (1024 * 1024));
 			gamestate.doFinalizeActions();
+			gamestate = null;
+			System.gc();
+			if (MEMORY_DEBUG)
+				System.out.println("Nach GameStateFinalisierung: " + Runtime.getRuntime().freeMemory() / (1024 * 1024));
 			// erst Lade Bildschirm und dann versuchen den state zu laden,
 			// ansonsten ende
 			gamestate = new Laden();
 			render();
 			Display.update();
+			if (MEMORY_DEBUG)
+				System.out.println("Nach Ladebildschirm: " + Runtime.getRuntime().freeMemory() / (1024 * 1024));
 			try {
 				String[] s = state.split(",");
 				state = s[0];
@@ -501,6 +511,8 @@ public class SuperMain implements OGLable {
 				e.printStackTrace();
 				SuperMain.out(e);
 			}
+			if (MEMORY_DEBUG)
+				System.out.println("Nach Neuen GS geladen: " + Runtime.getRuntime().freeMemory() / (1024 * 1024));
 		}
 
 		// ###########################
@@ -645,16 +657,17 @@ public class SuperMain implements OGLable {
 	 */
 	class Fps extends Thread {
 
-		//@override
+		// @override
 		public void run() {
+			this.setName("EIG-Fps Zaehler");
 			while (true) {
 				// Maximal 10% unterschied je sek zu lassen
 				/*
-				 * if (fps > (int) (oldfps * 1.3) || fps < (int) (oldfps * 0.9))
-				 * if (fps > oldfps) fps = (int) (oldfps * 1.3); else fps =
-				 * (int) (oldfps * 0.9);
+				 * if (fps > (int) (oldfps 1.3) || fps < (int) (oldfps 0.9)) if
+				 * (fps > oldfps) fps = (int) (oldfps 1.3); else fps = (int)
+				 * (oldfps 0.9);
 				 */
-
+				// System.gc();
 				oldfps = fps;
 				OGL.akt_fps = fps;
 				OGL.fps_anpassung = 60. / fps;
@@ -690,12 +703,12 @@ public class SuperMain implements OGLable {
 
 		public LoadState(String gamestate) {
 			this.gamestates = gamestate;
-
+			this.setName("EIG-SMain LoadState");
 			this.start();
 
 		}
 
-		//@override
+		// @override
 		public void run() {
 
 			System.out.println("gs");

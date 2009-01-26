@@ -1017,6 +1017,7 @@ public class Mecha implements Serializable {
 			// @override
 			public void run() {
 				super.run();
+				this.setName("EIG-Mecha Nachladen");
 				// warten in Abhängigkeit von skill
 				if (playsound) {
 					reload.play();

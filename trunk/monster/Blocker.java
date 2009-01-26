@@ -98,7 +98,7 @@ public class Blocker extends monster.master implements RotateAble, RadarAble {
 			skelett = new SkelettPusher(this.id);
 		// Start-Leben nach den Stats bestimmen.
 		initStats();
-		
+
 		if (crit == null)
 			crit = new OpenAlClip("sound/critical.ogg");
 
@@ -125,7 +125,7 @@ public class Blocker extends monster.master implements RotateAble, RadarAble {
 
 	}
 
-	//@override
+	// @override
 	public void setDrehwinkel(int dreh) {
 		this.rotation = dreh;
 
@@ -226,7 +226,7 @@ public class Blocker extends monster.master implements RotateAble, RadarAble {
 			this.caller_id = caller_id;
 		}
 
-		//@override
+		// @override
 		public boolean equals(Object obj) {
 			if (obj instanceof EnemyCaller) {
 				EnemyCaller new_name = (EnemyCaller) obj;
@@ -355,7 +355,7 @@ public class Blocker extends monster.master implements RotateAble, RadarAble {
 
 	// Für die Geschoss-Kollision vorgefertigte ellipsoide Annaeherung
 	// verwenden.
-	//@override
+	// @override
 	public boolean checkCollisionforObjekt(Vektor3D pos) {
 
 		// return skelett.checkCollisionforObjekt(pos.sub(getPosition()));
@@ -450,7 +450,8 @@ public class Blocker extends monster.master implements RotateAble, RadarAble {
 				// wert zur ermittlung der reaktionszeit wieder initialisieren.
 				first_time_called = 0;
 				// Player in meinem bewachungsradius?
-				if (waypoint.add(LevelPlay.p.getPosition().mal(-1)).length() <= 30 + (int) Sensors*2 - SuperMain.profil.mecha.getStealth()) {
+				if (waypoint.add(LevelPlay.p.getPosition().mal(-1)).length() <= 30 + (int) Sensors * 2
+						- SuperMain.profil.mecha.getStealth()) {
 
 					// Player rausschieben
 					if (!attacking)
@@ -477,10 +478,10 @@ public class Blocker extends monster.master implements RotateAble, RadarAble {
 
 	}
 
-	//@override
 	public void doCriticalDamage() {
+		// call super method, which plays the critical sound
 		super.doCriticalDamage();
-		crit.play();
+
 		last_critical_dmg = System.currentTimeMillis();
 	}
 

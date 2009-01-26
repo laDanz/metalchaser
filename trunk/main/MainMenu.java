@@ -886,6 +886,7 @@ public class MainMenu implements GameState {
 		new Thread() {
 			// @override
 			public void run() {
+				this.setName("EIG-MMenu HSeintrag");
 				HighscoreEintrag.writeLocaltoOnline();
 			}
 		}.start();

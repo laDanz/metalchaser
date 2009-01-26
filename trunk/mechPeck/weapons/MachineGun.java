@@ -1,5 +1,7 @@
 package mechPeck.weapons;
 
+import java.util.Random;
+
 import main.LevelPlay;
 import main.SuperMain;
 import mechPeck.munition.NineMilimeters;
@@ -8,12 +10,10 @@ import Classes.Level;
 import Classes.OGL;
 import Classes.OpenAlClip;
 import Classes.Vektor3D;
-import Classes.v3;
-import java.util.*;
 
 public class MachineGun extends WaffenMaster {
 
-	OpenAlClip sound;
+	static OpenAlClip sound;
 
 	public MachineGun() {
 		super();
@@ -23,33 +23,31 @@ public class MachineGun extends WaffenMaster {
 		setSchoots_per_second(4);
 		setSlot_count(3);
 		setAmountperslot(100);
-		sound = new OpenAlClip("sound/shoot1.ogg");
+		if (sound == null)
+			sound = new OpenAlClip("sound/shoot1.ogg");
 	}
 
 	// FIXME auslagerungs potenzial
 	public boolean feuer() {
 		if (!super.feuer())
 			return false;
-		
+
 		// Normalverteilte Zufallszahlen generieren
 		Random random = new Random();
 
-
 		// Geschoss erzeugen und Genauigkeit bestimmen
 
-		sound.play();		
+		sound.play();
 
-		double dx = salve/20 + random.nextGaussian()*2 / (1 + SuperMain.profil.mecha.getGatlingAccuracy()/20 );
-		double dy = salve/20 + random.nextGaussian()*2 / (1 + SuperMain.profil.mecha.getGatlingAccuracy()/20 );
-			
-		
-		//System.out.print("\t offset: "+salve/100+"\t dx= "+dx+"\t dy= "+dy+"\n");
-		
-		Vektor3D richtung = new Vektor3D(
-				-1 * Math.sin(Math.toRadians(LevelPlay.p.blickrichtung + dx)),
-				-1 * Math.sin(Math.toRadians(LevelPlay.p.yblick + dy)), 
-				-1 * Math.cos(Math.toRadians(LevelPlay.p.blickrichtung + dx)));
-		
+		double dx = salve / 20 + random.nextGaussian() * 2 / (1 + SuperMain.profil.mecha.getGatlingAccuracy() / 20);
+		double dy = salve / 20 + random.nextGaussian() * 2 / (1 + SuperMain.profil.mecha.getGatlingAccuracy() / 20);
+
+		// System.out.print("\t offset: "+salve/100+"\t dx= "+dx+"\t dy= "+dy+"\n");
+
+		Vektor3D richtung = new Vektor3D(-1 * Math.sin(Math.toRadians(LevelPlay.p.blickrichtung + dx)), -1
+				* Math.sin(Math.toRadians(LevelPlay.p.yblick + dy)), -1
+				* Math.cos(Math.toRadians(LevelPlay.p.blickrichtung + dx)));
+
 		if (Level.getSelectedPosition() != null) {
 
 			richtung = Level.getSelectedPosition().add(getAustrittsPkt().add(LevelPlay.p.getPosition()).mal(-1))

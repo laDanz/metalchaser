@@ -21,7 +21,7 @@ public class SchrottDrop implements Objekt, Serializable {
 	Vektor3D position;
 	int id;
 	static Object3D batterie = null, schlauch = null, munition = null, metaltrash = null;
-	OpenAlClip pickup;
+	static OpenAlClip pickup;
 
 	/**
 	 * Item drops on ground
@@ -30,23 +30,8 @@ public class SchrottDrop implements Objekt, Serializable {
 	 *            object that drops the item
 	 */
 	public SchrottDrop(Objekt old) {
-		position = old.getPosition();
-		id = SuperMain.genId();
-		initModel();
-		if (pickup == null)
-			pickup = new OpenAlClip("sound/pickup.ogg");
 
-	}
-
-	//@override
-	public boolean equals(Object obj) {
-		if (obj instanceof SchrottDrop) {
-			SchrottDrop new_name = (SchrottDrop) obj;
-			return new_name.id == this.id;
-
-		} else
-			return false;
-
+		this(old.getPosition());
 	}
 
 	/**
@@ -56,9 +41,22 @@ public class SchrottDrop implements Objekt, Serializable {
 	 *            3D Position on which the item drops
 	 */
 	public SchrottDrop(Vektor3D pos) {
-		position = pos;
+		position = new Vektor3D(pos);
 		id = SuperMain.genId();
 		initModel();
+		if (pickup == null)
+			pickup = new OpenAlClip("sound/pickup.ogg");
+
+	}
+
+	// @override
+	public boolean equals(Object obj) {
+		if (obj instanceof SchrottDrop) {
+			SchrottDrop new_name = (SchrottDrop) obj;
+			return new_name.id == this.id;
+
+		} else
+			return false;
 
 	}
 

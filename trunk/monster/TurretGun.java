@@ -37,11 +37,11 @@ public class TurretGun extends master implements RotateAble, RadarAble {
 	int pierc = (int) Math.round(Math.random() * getLevel() + 0.5);
 
 	private long abklingzeit = 0;
-	
+
 	// Normalverteilte Zufallszahlen generieren
 	Random random = new Random();
-	
-	OpenAlClip sound;
+
+	static OpenAlClip sound;
 
 	/**
 	 * Constructor
@@ -54,12 +54,12 @@ public class TurretGun extends master implements RotateAble, RadarAble {
 		mun = new Ammo(dmg, pierc);
 		if (sound == null)
 			sound = new OpenAlClip("sound/shoot1.ogg");
-		
+
 		if (crit == null)
 			crit = new OpenAlClip("sound/critical.ogg");
 	}
 
-	//@override
+	// @override
 	public void initStats() {
 		// Arms
 		Damage = 2;
@@ -99,13 +99,13 @@ public class TurretGun extends master implements RotateAble, RadarAble {
 	/**
 	 * Simple Setter
 	 */
-	//@override
+	// @override
 	public void setDrehwinkel(int dreh) {
 		this.drehwinkel = dreh;
 
 	}
 
-	//@override
+	// @override
 	public boolean checkCollisionforObjekt(Vektor3D pos) {
 		if (isAlive())
 			return skelett.checkCollisionforObjekt(pos, getPosition());
@@ -200,7 +200,7 @@ public class TurretGun extends master implements RotateAble, RadarAble {
 		// state #0: hin und her drehen
 		// wenn player nicht im sichtbereich
 		double distance = LevelPlay.p.getPosition().add(this.getPosition().mal(-1)).length();
-		if (distance > 30 + Sensors*2 - SuperMain.profil.mecha.getStealth()) {
+		if (distance > 30 + Sensors * 2 - SuperMain.profil.mecha.getStealth()) {
 			// bei geradem blickwinkel nach rechts
 			if (drehwinkel % 2 == 0) {
 				drehwinkel += 2;
@@ -236,8 +236,8 @@ public class TurretGun extends master implements RotateAble, RadarAble {
 					sound.play();
 
 					// Ungenauigkeit
-					double dx = 0.5 + salve/100 + random.nextGaussian() / (1 + GatlingAccuracy/30 );
-					double dy = 0.5 + salve/100 + random.nextGaussian() / (1 + GatlingAccuracy/30 );
+					double dx = 0.5 + salve / 100 + random.nextGaussian() / (1 + GatlingAccuracy / 30);
+					double dy = 0.5 + salve / 100 + random.nextGaussian() / (1 + GatlingAccuracy / 30);
 
 					Vektor3D richtung = new v3(-1 * Math.sin(Math.toRadians(drehwinkel - 90 + dx)), 1 * Math.sin(Math
 							.toRadians(y_drehwinkel + dy)), -1 * Math.cos(Math.toRadians(drehwinkel - 90 + dx)));
@@ -246,11 +246,12 @@ public class TurretGun extends master implements RotateAble, RadarAble {
 					Vektor3D geschospos = position.add(new v3(0, 3, 0)).add(richtung.normierter().mal(2.5));
 					Geschoss g = new Geschoss(geschospos, richtung, mun, speed, this.id);
 					LevelPlay.bullets.add(g);
-					
-					//abklingzeit = (long) (System.currentTimeMillis() + (1 / RateOfFire) * 1000);
-					abklingzeit = (long) (System.currentTimeMillis() + 300 - RateOfFire*20);
-					
-					if( salve < 200)
+
+					// abklingzeit = (long) (System.currentTimeMillis() + (1 /
+					// RateOfFire) * 1000);
+					abklingzeit = (long) (System.currentTimeMillis() + 300 - RateOfFire * 20);
+
+					if (salve < 200)
 						salve++;
 				}
 			} else {

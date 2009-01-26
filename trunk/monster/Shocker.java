@@ -8,7 +8,7 @@ import anim.SkelettShocker;
 public class Shocker extends Blocker {
 
 	long last_shock = 0;
-	OpenAlClip electric;
+	static OpenAlClip electric;
 
 	/**
 	 * Constructor
@@ -19,13 +19,13 @@ public class Shocker extends Blocker {
 		last_shock = 0;
 		if (electric == null)
 			electric = new OpenAlClip(SuperMain.ordner + "sound/electricFlashLong.ogg");
-		
+
 		if (crit == null)
 			crit = new OpenAlClip("sound/critical.ogg");
 		initStats();
 	}
 
-	//@override
+	// @override
 	public void initStats() {
 		// Arms
 		Damage = 0;
@@ -57,7 +57,7 @@ public class Shocker extends Blocker {
 	/**
 	 * Attack of the Monster
 	 */
-	//@override
+	// @override
 	public void doAttackRoutine() {
 		// TODO Auto-generated method stub
 		super.doAttackRoutine();
@@ -80,13 +80,13 @@ public class Shocker extends Blocker {
 			LevelPlay.p.hurt(schaden);
 
 		} else {
-			if (last_shock + 5000/ReloadTime < System.currentTimeMillis()) {
+			if (last_shock + 5000 / ReloadTime < System.currentTimeMillis()) {
 				last_shock = 0;
 			}
 		}
 	}
 
-	//@override
+	// @override
 	public String toString() {
 
 		return "Shocker";

@@ -23,6 +23,7 @@ public class fuckingMonster extends monster.master implements RotateAble, RadarA
 	changeWaybyTimeThread ChangeWaybyTimeThread;
 
 	// int health;
+	static OpenAlClip mycrit;
 
 	/**
 	 * Constructor
@@ -35,13 +36,18 @@ public class fuckingMonster extends monster.master implements RotateAble, RadarA
 		Health = 5;
 
 		try {
-			if (crit == null)
-				crit = new OpenAlClip("sound/pig.ogg");
+			if (mycrit == null)
+				mycrit = new OpenAlClip("sound/pig.ogg");
 		} catch (Exception ex) {
 			// Unsupported Conversion!
 
 			// FIXME
 		}
+	}
+
+	@Override
+	public void doCriticalDamage() {
+		mycrit.play();
 	}
 
 	// @override

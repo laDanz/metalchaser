@@ -35,7 +35,7 @@ public class master implements Objekt {
 	Vektor3D position;
 	Texture ico, healthbar;
 	long last_time_hurt = 0;
-	OpenAlClip death, crit;
+	static OpenAlClip death, crit;
 
 	/* Stats */
 	public double Damage, Piercing, CriticalDamage; // Arms
@@ -65,7 +65,7 @@ public class master implements Objekt {
 			crit = new OpenAlClip("sound/critical.ogg");
 
 		if (death == null)// FIXME schlechte sound datei
-			death = new OpenAlClip("sound/explosion2.ogg", 1);
+			death = new OpenAlClip("sound/explosion2.ogg");
 	}
 
 	/**
@@ -179,8 +179,8 @@ public class master implements Objekt {
 	/**
 	 * Set Level of the monster
 	 * 
-	 * @param i >
-	 *            0
+	 * @param i
+	 *            > 0
 	 */
 	public void setLevel(int level) {
 
@@ -405,6 +405,9 @@ public class master implements Objekt {
 		return "Monster";
 	}
 
+	/**
+	 * plays the critical sound.
+	 */
 	public void doCriticalDamage() {
 		if (crit != null) {
 			crit.play();
