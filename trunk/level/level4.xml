@@ -45022,9 +45022,7 @@
 <Objekt>
 <Klasse>class other.LevelInfo</Klasse>
 <Position>(10.0, 0.0, -2.0)</Position>
-<option>
-The neighbourvillage is not/nfar from here! If I can get/nthrough these last enemies/nI will accomplish my mission!
-</option>
+<option>The neighbourvillage is not/nfar from here! If I can get/nthrough these last enemies/nI will accomplish my mission!</option>
 </Objekt>
 <Objekt>
 <Klasse>class other.StartPkt</Klasse>
@@ -45288,5 +45286,14 @@ The neighbourvillage is not/nfar from here! If I can get/nthrough these last ene
 <option>350</option>
 <option>true</option>
 <option>img/skybox/sky-dark-f.jpg</option>
+</Objekt>
+<Objekt>
+<Klasse>class other.Object3Dputter</Klasse>
+<Position>(74.0, 0.0, -338.0)</Position>
+<option>30</option>
+<option>models/data0/000.mco</option>
+<option>img/env/Ruine_Texture_2k.png</option>
+<option>0.2</option>
+<option>0</option>
 </Objekt>
 </Cleaners>
