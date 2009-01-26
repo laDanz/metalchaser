@@ -21,7 +21,8 @@ public class Geschoss implements Serializable {
 	Munition mun;
 	long borntime;
 	int sender_id;
-	static OpenAlClip sound = null;
+	int random =0;
+	static OpenAlClip hit1 = null, hit2 = null, hit3 = null;
 
 	/**
 	 * Creates a new bullet.
@@ -94,9 +95,12 @@ public class Geschoss implements Serializable {
 		richtung = new v3(richtungsvektor);
 		this.abnahme = abnahme;
 		this.mun = mun;
-		if (sound == null) {
-			sound = new OpenAlClip(SuperMain.ordner + "sound/hit.ogg");
-		}
+		if (hit1 == null)
+			hit1 = new OpenAlClip(SuperMain.ordner + "sound/hit1.ogg");
+		if (hit2 == null)
+			hit2 = new OpenAlClip(SuperMain.ordner + "sound/hit2.ogg");
+		if (hit3 == null)
+			hit3 = new OpenAlClip(SuperMain.ordner + "sound/hit3.ogg");
 
 	}
 
@@ -160,7 +164,17 @@ public class Geschoss implements Serializable {
 		// mit player???
 		if (main.LevelPlay.p.checkCollisionforObjekt(pos)) {
 			collisionObj(main.LevelPlay.p);
-			sound.play();
+			
+			random = (int) Math.round( Math.random()*3 -0.4 );
+			
+			if(random==0)
+				hit1.play();
+			if(random==1)
+				hit2.play();
+			if(random==2)
+				hit3.play();	
+			
+			
 			setAlive(false);
 			return;
 		}
