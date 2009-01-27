@@ -91,8 +91,8 @@ public class fuckingMonster extends monster.master implements RotateAble, RadarA
 		SuperMain.addDrop(new VerteilbarePunkteDrop(position, 1));
 		SuperMain.addDrop(new EquipDrop(position, new MunPack(1 + (int) (100 * Math.random() + 100), new PigShells()),
 				new HealthPackage(10)));
-		if (crit != null)
-			crit.play();
+		if (mycrit != null)
+			mycrit.play();
 
 	}
 

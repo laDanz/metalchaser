@@ -65,7 +65,7 @@ public class master implements Objekt {
 			crit = new OpenAlClip("sound/critical.ogg");
 
 		if (death == null)// FIXME schlechte sound datei
-			death = new OpenAlClip("sound/explosion2.ogg");
+			death = new OpenAlClip("sound/explosion.ogg");
 	}
 
 	/**

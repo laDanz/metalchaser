@@ -429,7 +429,7 @@ public class Geschoss implements Serializable {
 			// System.out.println("Armor("+armor+") - Damage("+dmg+") = Schaden:
 			// " +schaden);
 
-			if (SuperMain.profil.mecha.getCriticalDamage() * 2 - o.getCriticalHitProtection() > Math.random() * 100) {
+			if (SuperMain.profil.mecha.getCriticalDamage()/2 - o.getCriticalHitProtection() > Math.random() * 100) {
 				schaden *= 2;
 				((monster.master) obj).doCriticalDamage();
 

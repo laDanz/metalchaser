@@ -133,8 +133,8 @@ public class StatsView {
 					+ Profil.mecha.getTDamage()*5 + "%)/n" + 
 					"Piercing: +" + round(Profil.mecha.getPiercing() - Profil.mecha.getTPiercing()) + " (+"
 					+ Profil.mecha.getTPiercing() + ")/n" + 
-					"CriticalDamage: +"	+ round(Profil.mecha.getCriticalDamage() - Profil.mecha.getTCriticalDamage())*2 + "% (+"
-					+ Profil.mecha.getTCriticalDamage()*2 + "%)";
+					"CriticalDamage: +"	+ round(Profil.mecha.getCriticalDamage() - Profil.mecha.getTCriticalDamage())/2 + "% (+"
+					+ Profil.mecha.getTCriticalDamage()/2 + "%)";
 		case 1: // Electronics
 			return "Sensors: +" + round(Profil.mecha.getSensors() - Profil.mecha.getTSensors()) + " (+"
 					+ Profil.mecha.getTSensors() + ")/n" + 
