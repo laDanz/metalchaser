@@ -32405,7 +32405,14 @@
 <Objekt>
 <Klasse>class other.LevelInfo</Klasse>
 <Position>(6.0, 0.0, -10.0)</Position>
-<option>Well done!/nYou have reached the Bonus/nLevel. We hope you enjoyed/nthe game. Visit our website/nfor news on MetalChaser 2/nwww.metalchaser.de
+<option>
+Well done! You've reached/n
+the bonus level! We hope you/n
+enjoyed the game and we'll see/n
+you again on MetalChaser II./n
+Check out our website at 
+www.metalchaser.de for further/n
+information.
 </option>
 </Objekt>
 <Objekt>
@@ -32551,28 +32558,28 @@
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(62.0, 2.0999999046325684, -18.0)</Position>
 <option>45</option>
-<option>180</option>
+<option>360</option>
 <option>2</option>
 </Objekt>
 <Objekt>
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(66.0, 3.453000068664551, -86.0)</Position>
 <option>300</option>
-<option>180</option>
+<option>360</option>
 <option>2</option>
 </Objekt>
 <Objekt>
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(138.0, 3.74399995803833, -86.0)</Position>
 <option>220</option>
-<option>180</option>
+<option>360</option>
 <option>2</option>
 </Objekt>
 <Objekt>
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(130.0, 2.4000000953674316, -18.0)</Position>
 <option>110</option>
-<option>180</option>
+<option>360</option>
 <option>2</option>
 </Objekt>
 <Objekt>

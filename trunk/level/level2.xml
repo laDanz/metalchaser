@@ -45022,7 +45022,13 @@
 <Objekt>
 <Klasse>class other.LevelInfo</Klasse>
 <Position>(10.0, 0.0, -2.0)</Position>
-<option>The enemies get tougher the/nfarther I get. Guess I have/nto get tougher as well...
+<option>
+June/14/2087/n
+I wasn't wrong. There are/n
+in fact more of them around/n
+here. This can't be good./n
+I have to force my way to/n
+Mega One at any cost.
 </option>
 </Objekt>
 <Objekt>
@@ -45057,14 +45063,14 @@
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(58.0, 0.8999999761581421, -102.0)</Position>
 <option>250</option>
-<option>180</option>
+<option>360</option>
 <option>4</option>
 </Objekt>
 <Objekt>
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(154.0, 0.8999999761581421, -94.0)</Position>
 <option>220</option>
-<option>300</option>
+<option>360</option>
 <option>4</option>
 </Objekt>
 <Objekt>
@@ -45274,7 +45280,7 @@
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(162.0, 0.8999999761581421, -290.0)</Position>
 <option>280</option>
-<option>180</option>
+<option>360</option>
 <option>4</option>
 </Objekt>
 <Objekt>
@@ -45323,7 +45329,7 @@
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(42.0, 0.8999999761581421, -326.0)</Position>
 <option>270</option>
-<option>180</option>
+<option>360</option>
 <option>4</option>
 </Objekt>
 <Objekt>

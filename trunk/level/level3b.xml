@@ -45021,7 +45021,13 @@
 <Objekt>
 <Klasse>class other.LevelInfo</Klasse>
 <Position>(10.0, 0.0, -2.0)</Position>
-<option>Well, this looks not good./nI hope I can stear my mech/nthrough this canyon without/nfalling down.</option>
+<option>June/15/2087/n
+Ok, this is seriously getting/n
+fucked up. The further north I/n
+get the more Shockers I hit. I/n
+think someone's trying to keep/n
+us off the cities. Fuck that./n
+Let's kick some metal ass!</option>
 </Objekt>
 <Objekt>
 <Klasse>class other.StartPkt</Klasse>
@@ -45089,21 +45095,21 @@
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(54.0, 0.8999999761581421, -194.0)</Position>
 <option>270</option>
-<option>180</option>
+<option>360</option>
 <option>5</option>
 </Objekt>
 <Objekt>
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(110.0, 0.8999999761581421, -206.0)</Position>
 <option>270</option>
-<option>180</option>
+<option>360</option>
 <option>5</option>
 </Objekt>
 <Objekt>
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(178.0, 0.8999999761581421, -346.0)</Position>
 <option>230</option>
-<option>180</option>
+<option>360</option>
 <option>5</option>
 </Objekt>
 <Objekt>
