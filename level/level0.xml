@@ -28821,7 +28821,14 @@
 <Objekt>
 <Klasse>class other.LevelInfo</Klasse>
 <Position>(86.0, 0.0, -14.0)</Position>
-<option>Alpha City stopped sending/nthe village supplies, which/nare essential for us./nSomeone has to walk to the/nneighbourvillage through the/nsecurity area. Seems like/nIm this someone...</option>
+<option>June/11/2087/n
+The latest deliveries from/n
+Phi City failed and we are/n
+getting short on supplies./n
+I'm going to Mega One to/n
+check if they have any idea/n
+what's going on...
+</option>
 </Objekt>
 <Objekt>
 <Klasse>class env.SkyKugel</Klasse>
@@ -28898,7 +28905,7 @@
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(70.0, 0.8999999761581421, -246.0)</Position>
 <option>290</option>
-<option>180</option>
+<option>360</option>
 <option>2</option>
 </Objekt>
 <Objekt>

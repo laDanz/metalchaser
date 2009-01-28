@@ -44996,7 +44996,7 @@
 <TexCoord2>(1.0, 1.0, 0.0)</TexCoord2>
 </quad>
 <quad>
-<ol>(196.0, 5.399999999999999, -400.0)</ol>
+<ol>(196.0, 5.399999999999999, -400.0in)</ol>
 <ul>(196.0, 10.500000000000004, -396.0)</ul>
 <or>(200.0, 0.0, -400.0)</or>
 <ur>(200.0, 0.0, -396.0)</ur>
@@ -45022,7 +45022,13 @@
 <Objekt>
 <Klasse>class other.LevelInfo</Klasse>
 <Position>(10.0, 0.0, -2.0)</Position>
-<option>The neighbourvillage is not/nfar from here! If I can get/nthrough these last enemies/nI will accomplish my mission!</option>
+<option>
+June/17/2087/n
+I'm almoust through, it can't/n
+be more than a few miles now./n
+I just hope it doesn't tough/n
+up too much from here on...
+</option>
 </Objekt>
 <Objekt>
 <Klasse>class other.StartPkt</Klasse>
@@ -45060,7 +45066,7 @@
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(166.0, 0.8999999761581421, -230.0)</Position>
 <option>270</option>
-<option>180</option>
+<option>360</option>
 <option>6</option>
 </Objekt>
 <Objekt>
@@ -45074,21 +45080,21 @@
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(90.0, 0.8999999761581421, -218.0)</Position>
 <option>270</option>
-<option>180</option>
+<option>360</option>
 <option>6</option>
 </Objekt>
 <Objekt>
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(130.0, 0.8999999761581421, -114.0)</Position>
 <option>290</option>
-<option>180</option>
+<option>360</option>
 <option>6</option>
 </Objekt>
 <Objekt>
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(70.0, 0.8999999761581421, -126.0)</Position>
 <option>240</option>
-<option>180</option>
+<option>360</option>
 <option>6</option>
 </Objekt>
 <Objekt>

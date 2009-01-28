@@ -45017,7 +45017,13 @@
 <Klasse>class other.LevelInfo</Klasse>
 <Position>(10.0, 0.0, -2.0)</Position>
 <option>
-Ok, this was foreplay./nNow it's time to seriously/nkick some metal asses!
+June/13/2087/n
+Weird, I hit some Blockers/n
+today. Usually they're only/n
+postioned around the cities/n
+so I'm beginning to worry./n
+Something's wrong, I can/n
+feel it...
 </option>
 </Objekt>
 <Objekt>
@@ -45086,7 +45092,7 @@ Ok, this was foreplay./nNow it's time to seriously/nkick some metal asses!
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(114.0, 0.8999999761581421, -138.0)</Position>
 <option>240</option>
-<option>180</option>
+<option>360</option>
 <option>3</option>
 </Objekt>
 <Objekt>
@@ -45142,7 +45148,7 @@ Ok, this was foreplay./nNow it's time to seriously/nkick some metal asses!
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(106.0, 0.8999999761581421, -46.0)</Position>
 <option>220</option>
-<option>180</option>
+<option>360</option>
 <option>2</option>
 </Objekt>
 <Objekt>
@@ -45240,7 +45246,7 @@ Ok, this was foreplay./nNow it's time to seriously/nkick some metal asses!
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(90.0, 0.8999999761581421, -214.0)</Position>
 <option>280</option>
-<option>180</option>
+<option>360</option>
 <option>4</option>
 </Objekt>
 <Objekt>
@@ -45282,14 +45288,14 @@ Ok, this was foreplay./nNow it's time to seriously/nkick some metal asses!
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(70.0, 0.8999999761581421, -262.0)</Position>
 <option>270</option>
-<option>180</option>
+<option>360</option>
 <option>3</option>
 </Objekt>
 <Objekt>
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(90.0, 0.8999999761581421, -322.0)</Position>
 <option>310</option>
-<option>180</option>
+<option>360</option>
 <option>3</option>
 </Objekt>
 <Objekt>
@@ -45338,7 +45344,7 @@ Ok, this was foreplay./nNow it's time to seriously/nkick some metal asses!
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(154.0, 0.8999999761581421, -318.0)</Position>
 <option>220</option>
-<option>180</option>
+<option>360</option>
 <option>3</option>
 </Objekt>
 <Objekt>
