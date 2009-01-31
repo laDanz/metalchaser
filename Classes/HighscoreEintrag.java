@@ -171,7 +171,7 @@ public class HighscoreEintrag implements Serializable {
 			data = data.substring(0, data.length() - 1);
 			// System.out.println(data);
 			// Send data
-			URL url = new URL("http://metalchaser.saso-labs.com/hp/pages/highscore.php");// :80/cgi
+			URL url = new URL("http://metalchaser.hannes-flor.de/?id=highscore");// :80/cgi
 			URLConnection conn = url.openConnection();
 			conn.setDoOutput(true);
 			OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
@@ -494,7 +494,7 @@ public class HighscoreEintrag implements Serializable {
 			return highscores.toArray(new String[0]);
 
 		LinkedList<Object> result = new LinkedList<Object>();
-		String url_to_show = "http://metalchaser.saso-labs.com/hp/pages/highscore.php";
+		String url_to_show = "http://metalchaser.hannes-flor.de/?id=highscore";
 
 		URLConnection con;
 		try {
