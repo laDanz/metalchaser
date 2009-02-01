@@ -44996,7 +44996,7 @@
 <TexCoord2>(1.0, 1.0, 0.0)</TexCoord2>
 </quad>
 <quad>
-<ol>(196.0, 5.399999999999999, -400.0in)</ol>
+<ol>(196.0, 5.399999999999999, -400.0)</ol>
 <ul>(196.0, 10.500000000000004, -396.0)</ul>
 <or>(200.0, 0.0, -400.0)</or>
 <ur>(200.0, 0.0, -396.0)</ur>
@@ -45022,13 +45022,7 @@
 <Objekt>
 <Klasse>class other.LevelInfo</Klasse>
 <Position>(10.0, 0.0, -2.0)</Position>
-<option>
-June/17/2087/n
-I'm almoust through, it can't/n
-be more than a few miles now./n
-I just hope it doesn't tough/n
-up too much from here on...
-</option>
+<option>This is Level 0</option>
 </Objekt>
 <Objekt>
 <Klasse>class other.StartPkt</Klasse>
