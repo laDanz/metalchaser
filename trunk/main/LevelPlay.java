@@ -215,7 +215,7 @@ public class LevelPlay implements GameState, ParameterAble, KeyListener {
 			dead = new OpenAlClip("sound/dead.ogg");
 
 		if (zielerreicht == null)
-			zielerreicht = new OpenAlClip("sound/dedededeDEDE.wav");
+			zielerreicht = new OpenAlClip("sound/finished.ogg");
 
 		Laden.addText("init Models");
 		// Models initialisieren
