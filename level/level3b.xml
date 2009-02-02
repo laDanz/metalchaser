@@ -45115,7 +45115,7 @@ Let's kick some metal ass!</option>
 <Objekt>
 <Klasse>class monster.TurretGun</Klasse>
 <Position>(78.0, 0.8999999761581421, -310.0)</Position>
-<option>0</option>
+<option>1</option>
 <option>360</option>
 <option>6</option>
 </Objekt>
